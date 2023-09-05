@@ -10,7 +10,7 @@ import (
 func main() {
 	head := &linkedlist.Node{Val: 1}
 
-	for i := 2; i <= 15; i++ {
+	for i := 2; i <= 10; i++ {
 		linkedlist.InsertAtEnd(head, i) // 0-->1-->2-->3-->4-->5-->null   output 5-->4-->3-->2-->1-->0-->null
 	}
 
@@ -18,7 +18,7 @@ func main() {
 
 	// head = linkedlist.DeleteAtStart(head)
 	// head = linkedlist.DeleteAtEnd(head)
-	head = linkedlist.ReverseInKGroupUsinRecursion(head, 4)
+	head = linkedlist.ReverseKGroup(head, 4)
 
 	fmt.Print(head)
 
