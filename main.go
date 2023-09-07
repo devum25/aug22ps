@@ -36,6 +36,6 @@ func main() {
 	fmt.Print(head)
 
 	arr := make([]int, 0)
-	sorting.SortSubarrayFromLtoR(arr, 0, 0, 0)
+	sorting.InsertionSort(arr)
 
 }
