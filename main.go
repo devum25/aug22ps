@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/devum25/techbench/linkedlist"
+	"github.com/devum25/techbench/sorting"
 )
 
 // [4,6,7,4,6,9,7,2,3,6] //9
@@ -33,5 +34,8 @@ func main() {
 	head = linkedlist.FindMidNodeFirstMid(head)
 
 	fmt.Print(head)
+
+	arr := make([]int, 0)
+	sorting.SortSubarrayFromLtoR(arr, 0, 0, 0)
 
 }
