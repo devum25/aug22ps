@@ -35,7 +35,8 @@ func main() {
 
 	fmt.Print(head)
 
-	arr := make([]int, 0)
-	sorting.InsertionSort(arr)
+	arr := []int{12, 9, 2, 10, 23, 19, 33, 1, 7}
+	sorting.Mergesort(arr)
+	fmt.Print(arr)
 
 }
