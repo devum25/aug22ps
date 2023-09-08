@@ -4,24 +4,29 @@ import (
 	"fmt"
 
 	"github.com/devum25/techbench/linkedlist"
-	"github.com/devum25/techbench/sorting"
 )
 
 // [4,6,7,4,6,9,7,2,3,6] //9
 func main() {
-	head := &linkedlist.Node{Val: 1}
+	head1 := &linkedlist.Node{Val: 2}
 
-	for i := 2; i <= 3; i++ {
-		linkedlist.InsertAtEnd(head, i) // 0-->1-->2-->3-->4-->5-->null   output 5-->4-->3-->2-->1-->0-->null
-	}
-
+	// for i := 2; i <= 9; i++ {
+	// 	linkedlist.InsertAtEnd(head, i) // 0-->1-->2-->3-->4-->5-->null   output 5-->4-->3-->2-->1-->0-->null
+	// }
+	//67 -> 27 -> 64 -> 10 -> 4 -> 85
 	// fmt.Print(head)
 
-	// linkedlist.InsertAtEnd(head1, 8)
-	// linkedlist.InsertAtEnd(head1, 10)
-	// linkedlist.InsertAtEnd(head1, 14)
-	// linkedlist.InsertAtEnd(head1, 20)
-	// // head = linkedlist.DeleteAtEnd(head)
+	linkedlist.InsertAtEnd(head1, 4)
+	linkedlist.InsertAtEnd(head1, 3)
+
+	head2 := &linkedlist.Node{Val: 5}
+	linkedlist.InsertAtEnd(head2, 6)
+	linkedlist.InsertAtEnd(head2, 4)
+	// linkedlist.InsertAtEnd(head2, 85)
+	// linkedlist.InsertAtEnd(head1, 33)
+	// linkedlist.InsertAtEnd(head1, 1)
+	// linkedlist.InsertAtEnd(head1, 7)
+	// head = linkedlist.DeleteAtEnd(head)
 
 	// head2 := &linkedlist.Node{Val: 2}
 
@@ -31,12 +36,14 @@ func main() {
 	// linkedlist.InsertAtEnd(head2, 12)
 	// linkedlist.InsertAtEnd(head2, 15)
 
-	head = linkedlist.FindMidNodeFirstMid(head)
+	head1 = linkedlist.AddTwoNumbers(head1, head2)
 
-	fmt.Print(head)
+	// head = linkedlist.FindMidNodeFirstMid(head)
 
-	arr := []int{12, 9, 2, 10, 23, 19, 33, 1, 7}
-	sorting.Mergesort(arr)
-	fmt.Print(arr)
+	fmt.Print(head1)
+
+	// arr := []int{12, 9, 2, 10, 23, 19, 33, 1, 7}
+	// sorting.Mergesort(arr)
+	// fmt.Print(arr)
 
 }
