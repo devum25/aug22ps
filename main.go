@@ -65,16 +65,17 @@ import (
 // }
 
 func main() {
-	s := stacks.MyNewStack()
+	s := stacks.RemoveConsecutiveDuplicate("abbbabaaa")
+	fmt.Print(s)
 
-	arr := []int{5, 2, 4, 7, 1, 1}
+	// arr := []int{5, 2, 4, 7, 1, 1}
 
-	for i := 0; i < len(arr); i++ {
-		s.Push(arr[i])
-	}
+	// for i := 0; i < len(arr); i++ {
+	// 	s.Push(arr[i])
+	// }
 
-	for i := 0; i < 5; i++ {
-		fmt.Print(s.GetMin())
-		s.Pop()
-	}
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Print(s.GetMin())
+	// 	s.Pop()
+	// }
 }
