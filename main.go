@@ -65,7 +65,7 @@ import (
 // }
 
 func main() {
-	s := stacks.RemoveConsecutiveDuplicate("abbbabaaa")
+	s := stacks.MinLength("ACBBD")
 	fmt.Print(s)
 
 	// arr := []int{5, 2, 4, 7, 1, 1}
