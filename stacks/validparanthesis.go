@@ -19,6 +19,7 @@ func solve(s string) int {
 		}
 		if s[i] == '(' || s[i] == '{' || s[i] == '[' {
 			st.Push(s[i])
+
 			continue
 		} else {
 			if st.Len() > 0 {
