@@ -68,11 +68,10 @@ func main() {
 	// s := stacks.ConvertToPostFix("3 + 10 * ( 3 - 4 / 2 ) + 3")
 	// s := stacks.ConvertToPostFix("13+10*(3-4/2)+3")
 	// x := []int{0, 2, 0}
-	fmt.Print(stacks.RemoveDuplicateLetters("abacb"))
+	fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
 	// fmt.Print(s)
 
 	// arr := []int{5, 2, 4, 7, 1, 1}
-
 	// for i := 0; i < len(arr); i++ {
 	// 	s.Push(arr[i])
 	// }
@@ -82,3 +81,6 @@ func main() {
 	// 	s.Pop()
 	// }
 }
+
+//abefiimnoyytywzy
+//uynyabefiiymnoyy

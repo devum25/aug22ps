@@ -7,7 +7,7 @@ func RemoveDuplicateLetters(s string) string {
 	stack.Push(s[0])
 	seen[s[0]-'a'] = 1
 	for i := 1; i < len(s); i++ {
-		for stack.Len() > 0 && s[i] < stack.Peek() && lastIdxs[stack.Peek()-'a'] > i {
+		for stack.Len() > 0 && s[i] < stack.Peek() && lastIdxs[stack.Peek()-'a'] > i && seen[s[i]-'a'] == 0 {
 			x := stack.Pop()
 			seen[x-'a'] = 0
 		}
