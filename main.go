@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/stacks"
+	"github.com/devum25/techbench/binarysearch"
 )
 
 // // [4,6,7,4,6,9,7,2,3,6] //9
@@ -63,13 +63,15 @@ import (
 // 	// fmt.Print(arr)
 
 // }
-
+// 8,222,222,-1,222,1111111,-1,1
+// 59,59,97,58,58,97,-1,-23,84,97
 func main() {
 	// s := stacks.ConvertToPostFix("3 + 10 * ( 3 - 4 / 2 ) + 3")
 	// s := stacks.ConvertToPostFix("13+10*(3-4/2)+3")
 	// x := []int{0, 2, 0}
-	fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
+	// fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
 	// fmt.Print(s)
+	fmt.Print(binarysearch.GetFloorOfElement([]int{-5, 2, 3, 6, 9, 10, 11, 15, 18}, -5))
 
 	// arr := []int{5, 2, 4, 7, 1, 1}
 	// for i := 0; i < len(arr); i++ {

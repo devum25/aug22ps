@@ -8,48 +8,37 @@ package stacks
 
 // When adding new element to stack, we just need to check if the stack is already full (has size of k), and if the character is not the same as letter, then also check if we are leaving enough space for the matching characters
 // aaabbbcccddd,3,b,2
-func SmallestSubsequenceWithLetter(s string, k int, letter byte, repetition int) string { // leetcode ,k = 4,rep=2,letter=e
-	// lastIdxs := getLastIndexArray(s)
-	// seen := make([]int, 26)
-	mapIdx := getMapIdx(s, letter)
-	stack := NewMyStack()
-	// stack.Push(s[0])
-	// seen[s[0]-'a'] = 1
-	pushed := false
-	isValid := false
+func SmallestSubsequenceWithLetter(s string, k int, letter byte, r int) string { // leetcode ,k = 4,rep=2,letter=e
+	n_letters := 0
+
 	for i := 0; i < len(s); i++ {
-		pushed = false
-		if stack.Len() > 0 && s[i] == letter && stack.Peek() == letter {
-			isValid, mapIdx = checkValidity(mapIdx, i, repetition, letter)
-			if isValid {
-				stack.Pop()
-				repetition++
+		if s[i] == letter {
+			n_letters++
+		}
+	}
+
+	stack := NewMyStack()
+
+	for i := 0; i < len(s); i++ {
+		for stack.Len() > 0 && stack.Peek() > s[i] && (len(s)-i+stack.Len() > k) &&
+			(stack.Peek() != letter || n_letters > r) {
+			if stack.Pop() == letter {
+				r++
 			}
 		}
 
-		for stack.Len() > 0 && s[i] < stack.Peek() && (stack.Len()+len(s)-1-i) >= k {
-			if stack.Peek() == letter {
-				isValid, mapIdx = checkValidity(mapIdx, i, repetition, letter)
-				if isValid {
-					stack.Pop()
-					repetition++
-					continue
-				} else if stack.Len() == 1 {
-					break
-				}
-			} else {
-				stack.Pop()
-			}
-		}
-		if !pushed && (stack.Len() == 0 || stack.Len() < k) {
+		if stack.Len() < k {
 			if s[i] == letter {
-				repetition--
 				stack.Push(s[i])
-			} else if k-stack.Len() > repetition {
+				r--
+			} else if k-stack.Len() > r {
 				stack.Push(s[i])
 			}
 		}
 
+		if s[i] == letter {
+			n_letters--
+		}
 	}
 
 	res := make([]byte, stack.Len())
@@ -59,39 +48,4 @@ func SmallestSubsequenceWithLetter(s string, k int, letter byte, repetition int)
 	}
 
 	return string(res)
-}
-
-// remove if there are letter available at later index with count = rep
-func checkValidity(mapIdx map[byte][]int, curr int, rep int, letter byte) (bool, map[byte][]int) {
-	x := mapIdx[letter]
-	res := []int{}
-	count := 0
-	for i := 0; i < len(x); i++ {
-		if x[i] >= curr {
-			res = append(res, x[i])
-		} else {
-			count++
-		}
-
-	}
-
-	if len(res) >= curr && count > 0 {
-		mapIdx[letter] = res
-		return true, mapIdx
-	}
-
-	return false, mapIdx
-}
-
-func getMapIdx(s string, letter byte) map[byte][]int {
-	mapIdx := make(map[byte][]int)
-	x := []int{}
-	for i := 0; i < len(s); i++ {
-		if s[i] == letter {
-			x = append(x, i)
-		}
-	}
-
-	mapIdx[letter] = x
-	return mapIdx
 }
