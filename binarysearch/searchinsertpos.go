@@ -1,0 +1,42 @@
+package binarysearch
+
+// Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+
+// You must write an algorithm with O(log n) runtime complexity.
+
+// Example 1:
+
+// Input: nums = [1,3,5,6], target = 5
+// Output: 2
+// Example 2:
+
+// Input: nums = [1,3,5,6], target = 2
+// Output: 1
+func SearchInsert(A []int, target int) int {
+	l, r := 0, len(A)-1
+
+	for l <= r {
+		mid := (l + r) / 2
+
+		if A[mid] == target {
+			return mid
+		} else if l == r {
+			if A[r] < target {
+				return r
+			} else {
+				return r - 1
+			}
+		} else if A[mid] < target {
+			l = mid + 1
+		} else if A[mid] > target {
+			r = mid - 1
+		}
+
+	}
+
+	if l > r {
+		return r
+	}
+
+	return -1
+}
