@@ -71,7 +71,7 @@ func main() {
 	// x := []int{0, 2, 0}
 	// fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
 	// fmt.Print(s)
-	fmt.Print(binarysearch.NextGreaterElement(230241)) // 230412
+	fmt.Print(binarysearch.FindInBiotonic([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11}, 12)) // 230412
 
 	// arr := []int{5, 2, 4, 7, 1, 1}
 	// for i := 0; i < len(arr); i++ {
