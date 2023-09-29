@@ -71,8 +71,11 @@ func main() {
 	// x := []int{0, 2, 0}
 	// fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
 	// fmt.Print(s)
-	matrix := [][]int{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}
-	fmt.Print(binarysearch.SearchMatrix(matrix, 3)) // 230412
+	// matrix := [][]int{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}
+	// fmt.Print(binarysearch.SearchMatrix(matrix, 3)) // 230412
+	// matrix := [][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}
+	matrix := [][]int{{1, 1}}
+	fmt.Print(binarysearch.FindIn2DMatrix(matrix, 2))
 
 	// arr := []int{5, 2, 4, 7, 1, 1}
 	// for i := 0; i < len(arr); i++ {
