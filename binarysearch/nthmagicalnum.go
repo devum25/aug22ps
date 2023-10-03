@@ -2,7 +2,7 @@ package binarysearch
 
 import "math"
 
-func nthMagicalNumber(n int, a int, b int) int {
+func NthMagicalNumber(n int, a int, b int) int {
 	l := a
 	if b < a {
 		l = b
@@ -44,6 +44,4 @@ func lcm(a, b int) int {
 			return i
 		}
 	}
-
-	return 0
 }

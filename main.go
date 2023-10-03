@@ -75,7 +75,7 @@ func main() {
 	// fmt.Print(binarysearch.SearchMatrix(matrix, 3)) // 230412
 	// matrix := [][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}
 	// matrix := [][]int{{1, 1}}
-	fmt.Print(binarysearch.NthMagicalNumber(4, 2, 3))
+	fmt.Print(binarysearch.AllocateBooks([]int{12, 34, 67, 90}, 2))
 
 	// arr := []int{5, 2, 4, 7, 1, 1}
 	// for i := 0; i < len(arr); i++ {
