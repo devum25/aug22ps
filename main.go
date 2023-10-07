@@ -3,30 +3,30 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/linkedlist"
 	"github.com/devum25/techbench/queue"
 )
 
 func main() {
 
-	queue := queue.NewQueue()
-	queue.Enqueue(1)
-	queue.Enqueue(2)
-	queue.Enqueue(3)
-	queue.Enqueue(5)
+	// queue := queue.NewQueue()
+	// queue.Enqueue(1)
+	// queue.Enqueue(2)
+	// queue.Enqueue(3)
+	// queue.Enqueue(5)
+	fmt.Print(queue.GetNthNumber(31))
 
-	fmt.Print(queue.Dequeue())
-	fmt.Print(queue.Dequeue())
-	queue.Enqueue(4)
-	fmt.Print(queue.Dequeue())
-	fmt.Print(queue.Dequeue())
-	fmt.Print(queue.Dequeue())
-	fmt.Print(queue.Dequeue())
+	// fmt.Print(queue.Dequeue())
+	// fmt.Print(queue.Dequeue())
+	// queue.Enqueue(4)
+	// fmt.Print(queue.Dequeue())
+	// fmt.Print(queue.Dequeue())
+	// fmt.Print(queue.Dequeue())
+	// fmt.Print(queue.Dequeue())
 
-	queue.Enqueue(1)
-	queue.Enqueue(2)
-	queue.Enqueue(3)
-	queue.Enqueue(5)
+	// queue.Enqueue(1)
+	// queue.Enqueue(2)
+	// queue.Enqueue(3)
+	// queue.Enqueue(5)
 
 	// lru := linkedlist.NewLRUCache(2)
 	// lru.Get(2)
@@ -45,13 +45,13 @@ func main() {
 	// }
 	//67 -> 27 -> 64 -> 10 -> 4 -> 85
 	// fmt.Print(head)
-	head1 := &linkedlist.Node{Val: 1}
+	// head1 := &linkedlist.Node{Val: 1}
 
-	linkedlist.InsertAtEnd(head1, 2)
+	// linkedlist.InsertAtEnd(head1, 2)
 
-	linkedlist.InsertAtEnd(head1, 3)
-	linkedlist.InsertAtEnd(head1, 4)
-	linkedlist.InsertAtEnd(head1, 5)
+	// linkedlist.InsertAtEnd(head1, 3)
+	// linkedlist.InsertAtEnd(head1, 4)
+	// linkedlist.InsertAtEnd(head1, 5)
 	// linkedlist.InsertAtEnd(head2, 4)
 	// linkedlist.InsertAtEnd(head2, 85)
 	// linkedlist.InsertAtEnd(head1, 33)
@@ -67,11 +67,11 @@ func main() {
 	// linkedlist.InsertAtEnd(head2, 12)
 	// linkedlist.InsertAtEnd(head2, 15)
 
-	fmt.Print(linkedlist.RotateRight(head1, 10))
+	// fmt.Print(linkedlist.RotateRight(head1, 10))
 
 	// head = linkedlist.FindMidNodeFirstMid(head)
 
-	fmt.Print(head1)
+	// fmt.Print(head1)
 
 	// arr := []int{12, 9, 2, 10, 23, 19, 33, 1, 7}
 	// sorting.Mergesort(arr)

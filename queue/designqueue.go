@@ -28,6 +28,7 @@ func (q *Queue) Dequeue() int {
 type Node struct {
 	val  int
 	next *Node
+	last *Node
 }
 
 func newLinkedList(v int) *Node {
@@ -36,17 +37,24 @@ func newLinkedList(v int) *Node {
 
 func (n *Node) insertAtEnd(x int) *Node {
 	h := n
-	for h.next != nil {
-		h = h.next
+	if n.last == nil {
+		h.next = &Node{val: x}
+		n.last = h.next
+	} else {
+		n.last.next = &Node{val: x}
+		n.last = n.last.next
 	}
-	h.next = &Node{val: x}
+
 	return n
 }
 
 func (n *Node) removeFromHead() (int, *Node) {
 	if n != nil {
+		last := n.last
 		val := n.val
 		n = n.next
+		n.last = last
+
 		return val, n
 	}
 
