@@ -25,6 +25,13 @@ func (q *Queue) Dequeue() int {
 	return 0
 }
 
+func (q *Queue) Top() int {
+	if q.items != nil {
+		return q.items.val
+	}
+	return -1
+}
+
 type Node struct {
 	val  int
 	next *Node
@@ -53,7 +60,9 @@ func (n *Node) removeFromHead() (int, *Node) {
 		last := n.last
 		val := n.val
 		n = n.next
-		n.last = last
+		if n != nil {
+			n.last = last
+		}
 
 		return val, n
 	}

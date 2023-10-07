@@ -13,7 +13,7 @@ func main() {
 	// queue.Enqueue(2)
 	// queue.Enqueue(3)
 	// queue.Enqueue(5)
-	fmt.Print(queue.GetNthNumber(31))
+	fmt.Print(queue.NonRepeatingStream("jyhrcwuengcbnuchctluxjgtxqtfvrebveewgasluuwooupcyxwgl")) // i,i,i,i,i,i,i,i,i,i
 
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
