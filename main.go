@@ -4,9 +4,29 @@ import (
 	"fmt"
 
 	"github.com/devum25/techbench/linkedlist"
+	"github.com/devum25/techbench/queue"
 )
 
 func main() {
+
+	queue := queue.NewQueue()
+	queue.Enqueue(1)
+	queue.Enqueue(2)
+	queue.Enqueue(3)
+	queue.Enqueue(5)
+
+	fmt.Print(queue.Dequeue())
+	fmt.Print(queue.Dequeue())
+	queue.Enqueue(4)
+	fmt.Print(queue.Dequeue())
+	fmt.Print(queue.Dequeue())
+	fmt.Print(queue.Dequeue())
+	fmt.Print(queue.Dequeue())
+
+	queue.Enqueue(1)
+	queue.Enqueue(2)
+	queue.Enqueue(3)
+	queue.Enqueue(5)
 
 	// lru := linkedlist.NewLRUCache(2)
 	// lru.Get(2)
