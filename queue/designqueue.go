@@ -32,14 +32,19 @@ func (q *Queue) Top() int {
 	return -1
 }
 
+func (q *Queue) size() int {
+	return q.items.size()
+}
+
 type Node struct {
-	val  int
-	next *Node
-	last *Node
+	val    int
+	next   *Node
+	last   *Node
+	length int
 }
 
 func newLinkedList(v int) *Node {
-	return &Node{val: v}
+	return &Node{val: v, length: 1}
 }
 
 func (n *Node) insertAtEnd(x int) *Node {
@@ -51,6 +56,7 @@ func (n *Node) insertAtEnd(x int) *Node {
 		n.last.next = &Node{val: x}
 		n.last = n.last.next
 	}
+	n.length++
 
 	return n
 }
@@ -58,14 +64,19 @@ func (n *Node) insertAtEnd(x int) *Node {
 func (n *Node) removeFromHead() (int, *Node) {
 	if n != nil {
 		last := n.last
+		l := n.length
 		val := n.val
 		n = n.next
 		if n != nil {
 			n.last = last
+			n.length = l - 1
 		}
-
 		return val, n
 	}
 
 	return 0, nil
+}
+
+func (n *Node) size() int {
+	return n.length
 }

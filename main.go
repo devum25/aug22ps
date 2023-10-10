@@ -13,7 +13,14 @@ func main() {
 	// queue.Enqueue(2)
 	// queue.Enqueue(3)
 	// queue.Enqueue(5)
-	fmt.Print(queue.NonRepeatingStream("jyhrcwuengcbnuchctluxjgtxqtfvrebveewgasluuwooupcyxwgl")) // i,i,i,i,i,i,i,i,i,i
+	// stack := queue.ConstructorNew() // i,i,i,i,i,i,i,i,i,i
+	// stack.Push(1)
+	// stack.Push(2)
+	// stack.Push(3)
+
+	// fmt.Print(stack.Top())
+
+	fmt.Print(queue.MaxSlidingWindow([]int{-7, -8, 7, 5, 7, 1, 6, 0}, 4)) //10,9,9,9,7,11,11
 
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
@@ -76,6 +83,21 @@ func main() {
 	// arr := []int{12, 9, 2, 10, 23, 19, 33, 1, 7}
 	// sorting.Mergesort(arr)
 	// fmt.Print(arr)
+
+	// dll := queue.NewListNode(2)
+	// h := dll.InsertAtStart(1)
+	// h.InsertAtEnd(3)
+	// h.InsertAtEnd(4)
+	// h = h.InsertAtStart(0)
+
+	// fmt.Print(h)
+
+	// deq := queue.NewDeque(1)
+	// deq.PushFront(0)
+	// deq.PushBack(2)
+	// deq.PushBack(3)
+	// fmt.Print(deq.RemoveFront())
+	// fmt.Print(deq.RemoveBack())
 
 }
 
