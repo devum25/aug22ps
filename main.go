@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/queue"
+	"github.com/devum25/techbench/recursion"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 
 	// fmt.Print(stack.Top())
 
-	fmt.Print(queue.MaxSlidingWindow([]int{-7, -8, 7, 5, 7, 1, 6, 0}, 4)) //10,9,9,9,7,11,11
+	//fmt.Print(queue.MaxSlidingWindow([]int{-7, -8, 7, 5, 7, 1, 6, 0}, 4)) //10,9,9,9,7,11,11
 
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
@@ -29,7 +29,8 @@ func main() {
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
-
+	// fmt.Print(math.Pow(34.0515, -3))
+	fmt.Print(recursion.KthGrammarOptimal(2, 2))
 	// queue.Enqueue(1)
 	// queue.Enqueue(2)
 	// queue.Enqueue(3)
