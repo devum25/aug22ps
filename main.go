@@ -30,7 +30,7 @@ func main() {
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(math.Pow(34.0515, -3))
-	fmt.Print(recursion.Solve(5, 3))
+	fmt.Print(recursion.PascalTriangle(5))
 	// queue.Enqueue(1)
 	// queue.Enqueue(2)
 	// queue.Enqueue(3)

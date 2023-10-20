@@ -24,3 +24,26 @@ func helpJoseph(idx int, k int, enemy int, n int, cir []int) int {
 	x := helpJoseph(idx, k, enemy, len(cir1), cir1)
 	return x
 }
+
+// better way
+func findTheWinner(n int, k int) int {
+	if n == 1 {
+		return 1
+	}
+
+	m := []int{}
+	// 0 based indexing
+	for i := 0; i < n; i++ {
+		m = append(m, i)
+	}
+
+	start := 0
+	for len(m) != 1 {
+		out := (start + k - 1) % len(m)
+		// delete element at index k
+		m = append(m[:out], m[out+1:]...)
+		start = out
+	}
+
+	return m[0] + 1
+}
