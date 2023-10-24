@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/recursion"
+	"github.com/devum25/techbench/binarytree"
 )
 
 func main() {
@@ -30,7 +30,8 @@ func main() {
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(math.Pow(34.0515, -3))
-	fmt.Print(recursion.PascalTriangle(5))
+	// fmt.Print(binarytree.BuildTree([]int{4, 8, 2, 5, 1, 6, 3, 7}, []int{8, 4, 5, 2, 6, 7, 3, 1}))
+	fmt.Print(binarytree.BuildTree_2([]int{3, 9, 20, 15, 7}, []int{9, 3, 15, 20, 7}))
 	// queue.Enqueue(1)
 	// queue.Enqueue(2)
 	// queue.Enqueue(3)
