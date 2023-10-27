@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/devum25/techbench/binarysearchtree"
 	"github.com/devum25/techbench/binarytree"
 )
 
@@ -132,16 +133,15 @@ func main() {
 	//uynyabefiiymnoyy
 	tree := binarytree.TreeNode{Val: 1,
 		Left: &binarytree.TreeNode{Val: 2,
-			Left: &binarytree.TreeNode{Val: 4},
-			Right: &binarytree.TreeNode{Val: 5,
-				Left:  &binarytree.TreeNode{Val: 7},
-				Right: &binarytree.TreeNode{Val: 8}}},
+			Left:  &binarytree.TreeNode{Val: 4},
+			Right: &binarytree.TreeNode{Val: 5}},
 		Right: &binarytree.TreeNode{Val: 3,
 			Left: &binarytree.TreeNode{Val: 6,
 				Left:  &binarytree.TreeNode{Val: 9},
-				Right: &binarytree.TreeNode{Val: 10}}}}
+				Right: &binarytree.TreeNode{Val: 10}},
+			Right: &binarytree.TreeNode{Val: 11}}}
 
-	x := binarytree.ZigzagLevelOrder(&tree)
+	x := binarysearchtree.IsHeightBalanced(&tree)
 
 	fmt.Print(x)
 
