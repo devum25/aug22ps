@@ -34,10 +34,10 @@ func tree(root *TreeNode, io []int, po []int, s, e, pos int) *TreeNode {
 		return nil
 	}
 
-	root = &TreeNode{val: po[pos]}
+	root = &TreeNode{Val: po[pos]}
 	idx := getIndex(io, po[pos])
-	root.left = tree(root, io, po, s, idx-1, pos-(e-idx)-1)
-	root.right = tree(root, io, po, idx+1, e, pos-1)
+	root.Left = tree(root, io, po, s, idx-1, pos-(e-idx)-1)
+	root.Right = tree(root, io, po, idx+1, e, pos-1)
 	return root
 }
 

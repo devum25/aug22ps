@@ -10,8 +10,8 @@ func help(root *TreeNode, count int) int {
 	}
 
 	count++
-	count = help(root.left, count)
-	count = help(root.right, count)
+	count = help(root.Left, count)
+	count = help(root.Right, count)
 
 	return count
 }

@@ -1,11 +1,11 @@
 package binarytree
 
 type TreeNode struct {
-	val   int
-	left  *TreeNode
-	right *TreeNode
+	Val   int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func NewTreeNode(val int) *TreeNode {
-	return &TreeNode{val: val}
+	return &TreeNode{Val: val}
 }

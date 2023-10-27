@@ -7,7 +7,7 @@ func maxDepth(root *TreeNode) int {
 		return 0
 	}
 
-	left := maxDepth(root.left)
-	right := maxDepth(root.right)
+	left := maxDepth(root.Left)
+	right := maxDepth(root.Right)
 	return int(math.Max(float64(left), float64(right))) + 1
 }

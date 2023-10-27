@@ -31,7 +31,7 @@ func main() {
 	// fmt.Print(queue.Dequeue())
 	// fmt.Print(math.Pow(34.0515, -3))
 	// fmt.Print(binarytree.BuildTree([]int{4, 8, 2, 5, 1, 6, 3, 7}, []int{8, 4, 5, 2, 6, 7, 3, 1}))
-	fmt.Print(binarytree.BuildTree_2([]int{3, 9, 20, 15, 7}, []int{9, 3, 15, 20, 7}))
+	// fmt.Print(binarytree.BuildTree_2([]int{3, 9, 20, 15, 7}, []int{9, 3, 15, 20, 7}))
 	// queue.Enqueue(1)
 	// queue.Enqueue(2)
 	// queue.Enqueue(3)
@@ -101,32 +101,48 @@ func main() {
 	// fmt.Print(deq.RemoveFront())
 	// fmt.Print(deq.RemoveBack())
 
+	// }
+
+	// 8,222,222,-1,222,1111111,-1,1
+	// 59,59,97,58,58,97,-1,-23,84,97
+	// func main() {
+	// 	// s := stacks.ConvertToPostFix("3 + 10 * ( 3 - 4 / 2 ) + 3")
+	// 	// s := stacks.ConvertToPostFix("13+10*(3-4/2)+3")
+	// 	// x := []int{0, 2, 0}
+	// 	// fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
+	// 	// fmt.Print(s)
+	// 	// matrix := [][]int{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}
+	// 	// fmt.Print(binarysearch.SearchMatrix(matrix, 3)) // 230412
+	// 	// matrix := [][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}
+	// 	// matrix := [][]int{{1, 1}}
+	// 	fmt.Print(binarysearch.MaximumCount([]int{-2, -1, -1, 0, 0, 0}))
+
+	// 	// arr := []int{5, 2, 4, 7, 1, 1}
+	// 	// for i := 0; i < len(arr); i++ {
+	// 	// 	s.Push(arr[i])
+	// 	// }
+
+	// 	// for i := 0; i < 5; i++ {
+	// 	// 	fmt.Print(s.GetMin())
+	// 	// 	s.Pop()
+	// 	// }
+	// }
+
+	//abefiimnoyytywzy
+	//uynyabefiiymnoyy
+	tree := binarytree.TreeNode{Val: 1,
+		Left: &binarytree.TreeNode{Val: 2,
+			Left: &binarytree.TreeNode{Val: 4},
+			Right: &binarytree.TreeNode{Val: 5,
+				Left:  &binarytree.TreeNode{Val: 7},
+				Right: &binarytree.TreeNode{Val: 8}}},
+		Right: &binarytree.TreeNode{Val: 3,
+			Left: &binarytree.TreeNode{Val: 6,
+				Left:  &binarytree.TreeNode{Val: 9},
+				Right: &binarytree.TreeNode{Val: 10}}}}
+
+	x := binarytree.ZigzagLevelOrder(&tree)
+
+	fmt.Print(x)
+
 }
-
-// 8,222,222,-1,222,1111111,-1,1
-// 59,59,97,58,58,97,-1,-23,84,97
-// func main() {
-// 	// s := stacks.ConvertToPostFix("3 + 10 * ( 3 - 4 / 2 ) + 3")
-// 	// s := stacks.ConvertToPostFix("13+10*(3-4/2)+3")
-// 	// x := []int{0, 2, 0}
-// 	// fmt.Print(stacks.SmallestSubsequenceWithLetter("wuynymkihfdcbabefiiymnoyyytywzy", 16, 'y', 4))
-// 	// fmt.Print(s)
-// 	// matrix := [][]int{{1, 3, 5, 7}, {10, 11, 16, 20}, {23, 30, 34, 60}}
-// 	// fmt.Print(binarysearch.SearchMatrix(matrix, 3)) // 230412
-// 	// matrix := [][]int{{1, 4, 7, 11, 15}, {2, 5, 8, 12, 19}, {3, 6, 9, 16, 22}, {10, 13, 14, 17, 24}, {18, 21, 23, 26, 30}}
-// 	// matrix := [][]int{{1, 1}}
-// 	fmt.Print(binarysearch.MaximumCount([]int{-2, -1, -1, 0, 0, 0}))
-
-// 	// arr := []int{5, 2, 4, 7, 1, 1}
-// 	// for i := 0; i < len(arr); i++ {
-// 	// 	s.Push(arr[i])
-// 	// }
-
-// 	// for i := 0; i < 5; i++ {
-// 	// 	fmt.Print(s.GetMin())
-// 	// 	s.Pop()
-// 	// }
-// }
-
-//abefiimnoyytywzy
-//uynyabefiiymnoyy

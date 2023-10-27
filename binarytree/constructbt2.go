@@ -12,10 +12,10 @@ func buildTree(preorder []int, inorder []int) *TreeNode {
 		return nil
 	}
 
-	root := &TreeNode{val: preorder[0]}
+	root := &TreeNode{Val: preorder[0]}
 	idx := getIdx(inorder, preorder[0])
-	root.left = buildTree(preorder[1:idx+1], inorder[:idx])
-	root.right = buildTree(preorder[idx+1:], inorder[idx+1:])
+	root.Left = buildTree(preorder[1:idx+1], inorder[:idx])
+	root.Right = buildTree(preorder[idx+1:], inorder[idx+1:])
 
 	return root
 }

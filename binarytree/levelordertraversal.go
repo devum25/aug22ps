@@ -17,12 +17,12 @@ func LevelOrderTraversal(root *TreeNode) [][]int {
 		for i := 0; i < size; i++ {
 			temp := queue[0]
 			queue = queue[1:]
-			level = append(level, temp.val)
-			if temp.left != nil {
-				queue = append(queue, *temp.left)
+			level = append(level, temp.Val)
+			if temp.Left != nil {
+				queue = append(queue, *temp.Left)
 			}
-			if temp.right != nil {
-				queue = append(queue, *temp.right)
+			if temp.Right != nil {
+				queue = append(queue, *temp.Right)
 			}
 		}
 

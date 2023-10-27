@@ -12,8 +12,8 @@ func preorder(root *TreeNode, res []int) []int {
 	}
 	// math.MinInt
 	// x := int(math.Max(float64(1), float64(2)))
-	res = append(res, root.val)
-	res = preorder(root.left, res)
-	res = preorder(root.right, res)
+	res = append(res, root.Val)
+	res = preorder(root.Left, res)
+	res = preorder(root.Right, res)
 	return res
 }
