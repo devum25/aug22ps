@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/binarysearchtree"
-	"github.com/devum25/techbench/binarytree"
+	"github.com/devum25/techbench/subarrays"
 )
 
 func main() {
@@ -131,18 +130,19 @@ func main() {
 
 	//abefiimnoyytywzy
 	//uynyabefiiymnoyy
-	tree := binarytree.TreeNode{Val: 1,
-		Left: &binarytree.TreeNode{Val: 2,
-			Left:  &binarytree.TreeNode{Val: 4},
-			Right: &binarytree.TreeNode{Val: 5}},
-		Right: &binarytree.TreeNode{Val: 3,
-			Left: &binarytree.TreeNode{Val: 6,
-				Left:  &binarytree.TreeNode{Val: 9},
-				Right: &binarytree.TreeNode{Val: 10}},
-			Right: &binarytree.TreeNode{Val: 11}}}
+	// tree := binarytree.TreeNode{Val: 1,
+	// 	Left: &binarytree.TreeNode{Val: 2,
+	// 		Left:  &binarytree.TreeNode{Val: 4},
+	// 		Right: &binarytree.TreeNode{Val: 5}},
+	// 	Right: &binarytree.TreeNode{Val: 3,
+	// 		Left: &binarytree.TreeNode{Val: 6,
+	// 			Left:  &binarytree.TreeNode{Val: 9},
+	// 			Right: &binarytree.TreeNode{Val: 10}},
+	// 		Right: &binarytree.TreeNode{Val: 11}}}
 
-	x := binarysearchtree.IsHeightBalanced(&tree)
+	// x := binarysearchtree.IsHeightBalanced(&tree)
 
-	fmt.Print(x)
+	// fmt.Print(x)
+	fmt.Print(subarrays.IsEquillibrium([]int{-1, -1, -1, -1, 0, 1}))
 
 }
