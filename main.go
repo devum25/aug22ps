@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/subarrays"
+	"github.com/devum25/techbench/binarysearchtree"
 )
 
 func main() {
@@ -143,6 +143,7 @@ func main() {
 	// x := binarysearchtree.IsHeightBalanced(&tree)
 
 	// fmt.Print(x)
-	fmt.Print(subarrays.IsEquillibrium([]int{-1, -1, -1, -1, 0, 1}))
+	node := binarysearchtree.SortedArrayToBST([]int{})
+	fmt.Print(binarysearchtree.IsValidBSTUsinInOrder(node))
 
 }
