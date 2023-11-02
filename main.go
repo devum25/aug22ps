@@ -143,7 +143,9 @@ func main() {
 	// x := binarysearchtree.IsHeightBalanced(&tree)
 
 	// fmt.Print(x)
-	node := binarysearchtree.SortedArrayToBST([]int{})
-	fmt.Print(binarysearchtree.IsValidBSTUsinInOrder(node))
+
+	node := &binarysearchtree.ListNode{Value: 20, Left: &binarysearchtree.ListNode{Value: 8}, Right: &binarysearchtree.ListNode{Value: 22}}
+	node = binarysearchtree.ConvertBSTtoDLL(node)
+	fmt.Print(node)
 
 }
