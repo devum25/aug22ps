@@ -19,3 +19,28 @@ func helpLCA(root, p, q *TreeNode) *TreeNode {
 	}
 
 }
+
+//  optimal way to do it
+func LCA(root, p, q *TreeNode) *TreeNode {
+	if root == nil {
+		return nil
+	}
+
+	if root == p || root == q {
+		return root
+	}
+
+	l := LCA(root.Left, p, q)
+	r := LCA(root.Right, p, q)
+
+	if l != nil && r != nil {
+		return root
+	}
+
+	if l != nil {
+		return l
+	} else {
+		return r
+	}
+
+}

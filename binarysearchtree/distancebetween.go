@@ -1,7 +1,7 @@
 package binarysearchtree
 
 func solve(root *TreeNode, B int, C int) int {
-	lca := LCA(root, B, C)
+	lca := LCA_1(root, B, C)
 	left := dist(lca, B)
 	right := dist(lca, C)
 
@@ -19,16 +19,16 @@ func dist(root *TreeNode, B int) int {
 	return 1 + dist(root.Right, B)
 }
 
-func LCA(root *TreeNode, B, C int) *TreeNode {
+func LCA_1(root *TreeNode, B, C int) *TreeNode {
 
 	if root == nil {
 		return nil
 	}
 
 	if root.Val > B && root.Val > C {
-		return LCA(root.Left, B, C)
+		return LCA_1(root.Left, B, C)
 	} else if root.Val < B && root.Val < C {
-		return LCA(root.Right, B, C)
+		return LCA_1(root.Right, B, C)
 	} else {
 		return root
 	}
