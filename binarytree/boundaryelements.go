@@ -1,51 +1,82 @@
 package binarytree
 
 func BoundaryView(root *TreeNode) []int {
-
-	x := helperBoundary(root)
-
-	ans := make([]int, 0)
-
-	for i := 0; i < len(x); i++ {
-		if i == len(x)-1 {
-			ans = append(ans, x[i]...)
-		} else {
-			ans = append(ans, x[i][0])
-		}
+	if root == nil {
+		return nil
 	}
 
-	for i := len(x) - 2; i >= 1; i-- {
-		ans = append(ans, x[i][len(x[i])-1])
-	}
-	return ans
-}
-
-func helperBoundary(root *TreeNode) [][]int {
-	queue := make([]*TreeNode, 0)
-	queue = append(queue, root)
-
-	res := make([][]int, 0)
-
-	for len(queue) > 0 {
-		size := len(queue)
-		list := make([]int, 0)
-		for i := 0; i < size; i++ {
-			temp := queue[0]
-			queue = queue[1:]
-			list = append(list, temp.Val)
-
-			if temp.Left != nil {
-				queue = append(queue, temp.Left)
-			}
-
-			if temp.Right != nil {
-				queue = append(queue, temp.Right)
-			}
-
-		}
-
-		res = append(res, list)
-	}
+	res := make([]int, 0)
+	res = append(res, root.Val)
+	leaves := []int{}
+	left := getLeft(root.Left)
+	right := getRight(root.Right)
+	res = append(res, left[:len(left)-1]...)
+	getLeaves(root, &leaves)
+	res = append(res, leaves...)
+	res = append(res, reverse(right[:len(right)-1])...)
 
 	return res
+}
+
+func getLeft(root *TreeNode) []int {
+	if root == nil {
+		return nil
+	}
+
+	x := make([]int, 0)
+
+	if root.Left != nil {
+
+		// to ensure top down order, print the node
+		// before calling itself for left subtree
+		x = append(x, root.Val)
+		getLeft(root.Left)
+	} else if root.Right != nil {
+		x = append(x, root.Val)
+		getLeft(root.Right)
+	}
+
+	return x
+}
+
+func getRight(root *TreeNode) []int {
+	if root == nil {
+		return nil
+	}
+
+	x := make([]int, 0)
+
+	if root.Right != nil {
+		x = append(x, root.Val)
+		getRight(root.Right)
+	} else if root.Left != nil {
+		x = append(x, root.Val)
+		getRight(root.Left)
+	}
+
+	return x
+}
+
+func getLeaves(root *TreeNode, x *[]int) {
+	if root == nil {
+		return
+	}
+
+	if root.Left == nil && root.Right == nil {
+		*x = append(*x, root.Val)
+	}
+
+	getLeaves(root.Left, x)
+	getLeaves(root.Right, x)
+}
+
+func reverse(x []int) []int {
+	i := 0
+	j := len(x) - 1
+
+	for i < j {
+		x[i], x[j] = x[j], x[i]
+	}
+
+	return x
 }

@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/devum25/techbench/binarysearchtree"
+	darraygo "github.com/devum25/techbench/2darray.go"
 )
 
 func main() {
@@ -144,8 +142,19 @@ func main() {
 
 	// fmt.Print(x)
 
-	node := &binarysearchtree.ListNode{Value: 20, Left: &binarysearchtree.ListNode{Value: 8}, Right: &binarysearchtree.ListNode{Value: 22}}
-	node = binarysearchtree.ConvertBSTtoDLL(node)
-	fmt.Print(node)
+	// node := &binarytree.TreeNode{Val: 9,
+	// 	Left: &binarytree.TreeNode{Val: 6,
+	// 		Left:  &binarytree.TreeNode{Val: 23},
+	// 		Right: &binarytree.TreeNode{Val: 7}},
+	// 	Right: &binarytree.TreeNode{Val: 17}}
 
+	// binarytree.DiagonalTraversal(node)
+
+	arr := make([][]int, 0)
+
+	arr = append(arr, []int{1, 2, 3, 4})
+	arr = append(arr, []int{5, 6, 7, 8})
+	arr = append(arr, []int{9, 10, 11, 12})
+
+	darraygo.SpiralOfRecatange(arr)
 }
