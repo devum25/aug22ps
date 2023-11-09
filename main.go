@@ -142,9 +142,9 @@ func main() {
 	// x := binarysearchtree.IsHeightBalanced(&tree)
 
 	// fmt.Print(x)
-	node := &binarytree.TreeNode{Val: 8,
-		Left:  &binarytree.TreeNode{Val: 9},
-		Right: &binarytree.TreeNode{Val: -6, Left: &binarytree.TreeNode{Val: 5}, Right: &binarytree.TreeNode{Val: 9}}}
+	// node := &binarytree.TreeNode{Val: 8,
+	// 	Left:  &binarytree.TreeNode{Val: 9},
+	// 	Right: &binarytree.TreeNode{Val: -6, Left: &binarytree.TreeNode{Val: 5}, Right: &binarytree.TreeNode{Val: 9}}}
 
 	// node := &binarytree.TreeNode{Val: 1,
 	// 	Left:  &binarytree.TreeNode{Val: 2},
@@ -161,7 +161,13 @@ func main() {
 	// Right: &binarytree.TreeNode{Val: 8, Left: &binarytree.TreeNode{Val: 13},
 	// Right: &binarytree.TreeNode{Val: 20, Left: &binarytree.TreeNode{Val: 15}, Right: &binarytree.TreeNode{Val: 7}}}
 
-	binarytree.MaxPathSum(node)
+	// binarytree.MaxPathSum(node)
+
+	// node := &binarytree.TreeNode{Val: 1,
+	// 	Left:  &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 3}},
+	// 	Right: &binarytree.TreeNode{Val: 5, Right: &binarytree.TreeNode{Val: 6}}}
+
+	binarytree.DeserializeBt([]int{1, 2, 3, 4, 5, -1, 6, -1, -1, -1, -1, -1, -1})
 
 	arr := make([][]int, 0)
 
