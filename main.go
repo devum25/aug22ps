@@ -2,6 +2,7 @@ package main
 
 import (
 	darraygo "github.com/devum25/techbench/2darray.go"
+	"github.com/devum25/techbench/binarytree"
 )
 
 func main() {
@@ -141,14 +142,26 @@ func main() {
 	// x := binarysearchtree.IsHeightBalanced(&tree)
 
 	// fmt.Print(x)
+	node := &binarytree.TreeNode{Val: 8,
+		Left:  &binarytree.TreeNode{Val: 9},
+		Right: &binarytree.TreeNode{Val: -6, Left: &binarytree.TreeNode{Val: 5}, Right: &binarytree.TreeNode{Val: 9}}}
 
-	// node := &binarytree.TreeNode{Val: 9,
-	// 	Left: &binarytree.TreeNode{Val: 6,
-	// 		Left:  &binarytree.TreeNode{Val: 23},
-	// 		Right: &binarytree.TreeNode{Val: 7}},
-	// 	Right: &binarytree.TreeNode{Val: 17}}
+	// node := &binarytree.TreeNode{Val: 1,
+	// 	Left:  &binarytree.TreeNode{Val: 2},
+	// 	Right: &binarytree.TreeNode{Val: 3}}
+	// Left: &binarytree.TreeNode{Val: 3, Left: &binarytree.TreeNode{Val: 4,
+	// 	Left: &binarytree.TreeNode{Val: 5}}}}}
 
-	// binarytree.DiagonalTraversal(node)
+	// node := &binarytree.TreeNode{Val: 1,
+	// 	Left: &binarytree.TreeNode{Val: 2}}
+	// Left: &binarytree.TreeNode{Val: 3, Left: &binarytree.TreeNode{Val: 4,
+	// 	Left: &binarytree.TreeNode{Val: 5}}}}}
+	// 	Left: &binarytree.TreeNode{Val: 11, Left: &binarytree.TreeNode{Val: 7}, Right: &binarytree.TreeNode{Val: 2}},
+	// },
+	// Right: &binarytree.TreeNode{Val: 8, Left: &binarytree.TreeNode{Val: 13},
+	// Right: &binarytree.TreeNode{Val: 20, Left: &binarytree.TreeNode{Val: 15}, Right: &binarytree.TreeNode{Val: 7}}}
+
+	binarytree.MaxPathSum(node)
 
 	arr := make([][]int, 0)
 
