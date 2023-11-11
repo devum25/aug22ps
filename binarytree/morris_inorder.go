@@ -11,7 +11,7 @@ func MorrisIteration(root *TreeNode) {
 		} else {
 			temp := curr.Left
 
-			for temp.Right != nil || temp.Right == curr {
+			for temp.Right != nil && temp.Right != curr {
 				temp = temp.Right
 			}
 
