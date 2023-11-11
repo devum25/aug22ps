@@ -163,9 +163,11 @@ func main() {
 
 	// binarytree.MaxPathSum(node)
 
-	// node := &binarytree.TreeNode{Val: 1,
-	// 	Left:  &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 3}},
-	// 	Right: &binarytree.TreeNode{Val: 5, Right: &binarytree.TreeNode{Val: 6}}}
+	node := &binarytree.TreeNode{Val: 1,
+		// Left:  &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 3}},
+		Right: &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 3}}}
+
+	binarytree.IterativePostOrder(node)
 
 	binarytree.DeserializeBt([]int{1, 2, 3, 4, 5, -1, 6, -1, -1, -1, -1, -1, -1})
 

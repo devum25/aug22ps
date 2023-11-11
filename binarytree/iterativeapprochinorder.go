@@ -32,6 +32,11 @@ func (s *Stack) Push(x *TreeNode) {
 	s.items = append(s.items, x)
 }
 
+func (s *Stack) Top() *TreeNode {
+	val := s.items[len(s.items)-1]
+	return val
+}
+
 func (s *Stack) Pop() *TreeNode {
 	val := s.items[len(s.items)-1]
 	s.items = s.items[:len(s.items)-1]
@@ -39,5 +44,5 @@ func (s *Stack) Pop() *TreeNode {
 }
 
 func (s *Stack) IsEmpty() bool {
-	return len(s.items) > 0
+	return len(s.items) <= 0
 }
