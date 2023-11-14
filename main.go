@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/arrayquestion"
+	"github.com/devum25/techbench/trie"
 )
 
 func main() {
@@ -179,7 +179,13 @@ func main() {
 	// arr = append(arr, []int{9, 10, 11, 12})
 
 	// darraygo.SpiralOfRecatange(arr)
-	fmt.Print(arrayquestion.CountDirtyIndices([]int{4, 3, 2, 7, 6, -2}))
+	t := trie.Constructor()
+
+	t.Insert("FIRE")
+	fmt.Print(t.Search("FIRE"))
+	fmt.Print(t.Search("FIR"))
+
+	trie.GetUniquePrefix([]string{"cat", "dog", "rat", "doog", "donkey"})
 }
 
 // 4,2,5,1,6,7,3
