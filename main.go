@@ -1,8 +1,9 @@
 package main
 
 import (
-	darraygo "github.com/devum25/techbench/2darray.go"
-	"github.com/devum25/techbench/binarytree"
+	"fmt"
+
+	"github.com/devum25/techbench/arrayquestion"
 )
 
 func main() {
@@ -163,19 +164,22 @@ func main() {
 
 	// binarytree.MaxPathSum(node)
 
-	node := &binarytree.TreeNode{Val: 1,
-		Left:  &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 4}, Right: &binarytree.TreeNode{Val: 5}},
-		Right: &binarytree.TreeNode{Val: 3, Left: &binarytree.TreeNode{Val: 6}, Right: &binarytree.TreeNode{Val: 7}}}
+	// node := &binarytree.TreeNode{Val: 1,
+	// 	Left:  &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 4}, Right: &binarytree.TreeNode{Val: 5}},
+	// 	Right: &binarytree.TreeNode{Val: 3, Left: &binarytree.TreeNode{Val: 6}, Right: &binarytree.TreeNode{Val: 7}}}
 
-	binarytree.MorrisPreOrder(node)
+	// binarytree.MorrisIteration(node)
 
-	binarytree.DeserializeBt([]int{1, 2, 3, 4, 5, -1, 6, -1, -1, -1, -1, -1, -1})
+	// binarytree.DeserializeBt([]int{1, 2, 3, 4, 5, -1, 6, -1, -1, -1, -1, -1, -1})
 
-	arr := make([][]int, 0)
+	// arr := make([][]int, 0)
 
-	arr = append(arr, []int{1, 2, 3, 4})
-	arr = append(arr, []int{5, 6, 7, 8})
-	arr = append(arr, []int{9, 10, 11, 12})
+	// arr = append(arr, []int{1, 2, 3, 4})
+	// arr = append(arr, []int{5, 6, 7, 8})
+	// arr = append(arr, []int{9, 10, 11, 12})
 
-	darraygo.SpiralOfRecatange(arr)
+	// darraygo.SpiralOfRecatange(arr)
+	fmt.Print(arrayquestion.CountDirtyIndices([]int{4, 3, 2, 7, 6, -2}))
 }
+
+// 4,2,5,1,6,7,3
