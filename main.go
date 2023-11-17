@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/devum25/techbench/arrayquestion"
 	"github.com/devum25/techbench/trie"
 )
 
@@ -179,13 +180,23 @@ func main() {
 	// arr = append(arr, []int{9, 10, 11, 12})
 
 	// darraygo.SpiralOfRecatange(arr)
+	arrayquestion.MaxProductSubarray([]int{-1, -2, -9, -6})
+
+	B := make([][]int, 0)
+
+	B = append(B, []int{1, 2, 10})
+	B = append(B, []int{2, 3, 20})
+	B = append(B, []int{2, 5, 25})
+
+	arrayquestion.ContinuousSumSubQuery(5, B)
+
 	t := trie.Constructor()
 
 	t.Insert("FIRE")
 	fmt.Print(t.Search("FIRE"))
 	fmt.Print(t.Search("FIR"))
 
-	trie.GetUniquePrefix([]string{"cat", "dog", "rat", "doog", "donkey"})
+	trie.ContactFinder([]int{0, 0, 1, 1}, []string{"hack", "hacker", "hac", "hak"})
 }
 
 // 4,2,5,1,6,7,3
