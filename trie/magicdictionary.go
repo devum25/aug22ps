@@ -16,14 +16,14 @@ package trie
 // Output
 // [null, null, false, true, false, false]
 
-// type MagicDictionary struct {
-// 	hash map[byte]*MagicDictionary
-// 	end  bool
-// }
+type MagicDictionary struct {
+	hash map[byte]*MagicDictionary
+	end  bool
+}
 
-// func ConstructorMagicDictionary() MagicDictionary {
-// 	return MagicDictionary{hash: make(map[byte]*MagicDictionary)}
-// }
+func ConstructorMagicDictionary() MagicDictionary {
+	return MagicDictionary{hash: make(map[byte]*MagicDictionary)}
+}
 
 // func (this *MagicDictionary) BuildDict(dictionary []string) {
 // 	curr := this
@@ -52,14 +52,17 @@ package trie
 // }
 
 // func search(node *MagicDictionary, idx int, word string, flag int) bool {
-// 	if idx == len(word) {
-// 		if flag == 1 && node.end {
-// 			return true
-// 		}
-// 		return false
-// 	}
 
-// 	search(node,)
+// 	curr := node
+
+// 	// for i := 0; i < len(word); i++ {
+// 	// 	if _, ok := curr.hash[word[i]]; !ok {
+
+// 	// 	}
+// 	// 	curr = curr.hash[word[i]]
+// 	// }
+
+// 	search(curr.hash[word[idx]], idx+1, word, flag)
 
 // 	return false
 // }
@@ -70,3 +73,53 @@ package trie
  * obj.BuildDict(dictionary);
  * param_2 := obj.Search(searchWord);
  */
+
+func (m *MagicDictionary) BuildDict(dictionary []string) {
+	for _, word := range dictionary {
+		m.insert(word)
+	}
+}
+
+func (m *MagicDictionary) insert(word string) {
+	curr := m
+
+	for i := 0; i < len(word); i++ {
+		if _, ok := curr.hash[word[i]]; !ok {
+			x := ConstructorMagicDictionary()
+			curr.hash[word[i]] = &x
+		}
+		curr = curr.hash[word[i]]
+	}
+	curr.end = true
+}
+
+func (m *MagicDictionary) Search(searchWord string) bool {
+	return dfs(m, searchWord, 0, 1)
+}
+
+func dfs(r *MagicDictionary, w string, i int, limit int) bool {
+	// base case
+	if limit < 0 {
+		return false
+	}
+	if i == len(w) {
+		return r.end && limit == 0
+	}
+
+	// iterate current node's all children
+	ch := w[i]
+	for c, t := range r.hash {
+		if t == nil {
+			continue
+		}
+		// c == ch, represent don't need change.
+		if c == ch && dfs(t, w, i+1, limit) {
+			return true
+		}
+		// c != ch, represent consume one chance for change
+		if c != ch && dfs(t, w, i+1, limit-1) {
+			return true
+		}
+	}
+	return false
+}

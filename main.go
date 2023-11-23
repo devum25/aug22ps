@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/arrayquestion"
-	"github.com/devum25/techbench/trie"
+	"github.com/devum25/techbench/heaps"
 )
 
 func main() {
@@ -180,23 +179,45 @@ func main() {
 	// arr = append(arr, []int{9, 10, 11, 12})
 
 	// darraygo.SpiralOfRecatange(arr)
-	arrayquestion.MaxProductSubarray([]int{-1, -2, -9, -6})
+	// arrayquestion.MaxAbsoluteSum([]int{2, -5, 1, -4, 3, -2})
 
-	B := make([][]int, 0)
+	// B := make([][]int, 0)
 
-	B = append(B, []int{1, 2, 10})
-	B = append(B, []int{2, 3, 20})
-	B = append(B, []int{2, 5, 25})
+	// B = append(B, []int{1, 2, 10})
+	// B = append(B, []int{2, 3, 20})
+	// B = append(B, []int{2, 5, 25})
 
-	arrayquestion.ContinuousSumSubQuery(5, B)
+	// arrayquestion.Flip("010")
 
-	t := trie.Constructor()
+	// t := trie.Constructor()
 
-	t.Insert("FIRE")
-	fmt.Print(t.Search("FIRE"))
-	fmt.Print(t.Search("FIR"))
+	// t.Insert("FIRE")
+	// fmt.Print(t.Search("FIRE"))
+	// fmt.Print(t.Search("FIR"))
 
-	trie.ContactFinder([]int{0, 0, 1, 1}, []string{"hack", "hacker", "hac", "hak"})
+	// trie.ContactFinder([]int{0, 0, 1, 1}, []string{"hack", "hacker", "hac", "hak"})
+
+	// trie := trie.ConstructorMagicDictionary()
+
+	// trie.BuildDict([]string{"hello", "leetcode"})
+
+	// trie.Search("hhllo")
+
+	maxHeap := heaps.NewMaxHeap()
+
+	fmt.Print(heaps.SortNearlySorted([]int{6, 5, 3, 2, 8, 10, 9}, 3))
+
+	arr := []int{18, 3, 16, 10, 17, 1, 5, 7, 13, 15}
+
+	for i := 0; i < len(arr); i++ {
+		maxHeap.Insert(arr[i])
+	}
+
+	fmt.Print(heaps.CreateMaxHeap(arr))
+
+	fmt.Print(maxHeap.Items)
+
+	fmt.Print(heaps.MergeRopes([]int{16, 7, 3, 5, 9, 8, 6, 15}))
 }
 
 // 4,2,5,1,6,7,3
