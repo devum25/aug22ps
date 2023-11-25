@@ -205,7 +205,17 @@ func main() {
 
 	maxHeap := heaps.NewMaxHeap()
 
-	fmt.Print(heaps.SortNearlySorted([]int{6, 5, 3, 2, 8, 10, 9}, 3))
+	mf := heaps.Constructor()
+	mf.AddNum(-1)
+	fmt.Println(mf.FindMedian())
+	mf.AddNum(-2)
+	fmt.Println(mf.FindMedian())
+	mf.AddNum(-3)
+	fmt.Println(mf.FindMedian())
+
+	fmt.Println(heaps.Median([]int{9, 6, 3, 10, 4}))
+
+	// heaps.HeapSort([]int{8, 3, 7, 6, 1, 5, 10, 4, 9})
 
 	arr := []int{18, 3, 16, 10, 17, 1, 5, 7, 13, 15}
 
