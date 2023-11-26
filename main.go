@@ -1,10 +1,6 @@
 package main
 
-import (
-	"fmt"
-
-	"github.com/devum25/techbench/heaps"
-)
+import "github.com/devum25/techbench/heaps"
 
 func main() {
 
@@ -203,31 +199,36 @@ func main() {
 
 	// trie.Search("hhllo")
 
-	maxHeap := heaps.NewMaxHeap()
+	// fmt.Print(heaps.MinLargest([]int{5, 7, 8}, 9))
+	// // X.Add(-3)
+	// // X.Add(-2)
+	// // X.Add(-4)
+	// // X.Add(0)
+	// // X.Add(4)
 
-	mf := heaps.Constructor()
-	mf.AddNum(-1)
-	fmt.Println(mf.FindMedian())
-	mf.AddNum(-2)
-	fmt.Println(mf.FindMedian())
-	mf.AddNum(-3)
-	fmt.Println(mf.FindMedian())
+	// maxHeap := heaps.NewMaxHeap()
+	// heaps.SpecialMedian([]int{2147483647, -2147483648, 0})
 
-	fmt.Println(heaps.Median([]int{9, 6, 3, 10, 4}))
+	// heaps.RunnningMedian([]int{10, 47, 82, 30, 52, 46, 84, 47, 97, 38})
+	// heaps.RunnningMedian([]int{1, 2, 5, 4, 3})
 
-	// heaps.HeapSort([]int{8, 3, 7, 6, 1, 5, 10, 4, 9})
+	// fmt.Println(heaps.Median([]int{9, 6, 3, 10, 4}))
 
-	arr := []int{18, 3, 16, 10, 17, 1, 5, 7, 13, 15}
+	// // heaps.HeapSort([]int{8, 3, 7, 6, 1, 5, 10, 4, 9})
 
-	for i := 0; i < len(arr); i++ {
-		maxHeap.Insert(arr[i])
-	}
+	// arr := []int{18, 3, 16, 10, 17, 1, 5, 7, 13, 15}
 
-	fmt.Print(heaps.CreateMaxHeap(arr))
+	// for i := 0; i < len(arr); i++ {
+	// 	maxHeap.Insert(arr[i])
+	// }
 
-	fmt.Print(maxHeap.Items)
+	// fmt.Print(heaps.CreateMaxHeap(arr))
 
-	fmt.Print(heaps.MergeRopes([]int{16, 7, 3, 5, 9, 8, 6, 15}))
+	// fmt.Print(maxHeap.Items)
+
+	// fmt.Print(heaps.MergeRopes([]int{16, 7, 3, 5, 9, 8, 6, 15}))
+
+	heaps.KPlaceApart([]int{1, 40, 2, 3}, 2)
 }
 
 // 4,2,5,1,6,7,3

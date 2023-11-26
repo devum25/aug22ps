@@ -35,7 +35,9 @@ func (m *MinHeap) DeleteMin() int {
 	m.Items[0], m.Items[m.size] = m.Items[m.size], m.Items[0]
 
 	m.Items = m.Items[:m.size]
-	m.size--
+	if m.size != 0 {
+		m.size--
+	}
 
 	i := 0
 
