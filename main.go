@@ -1,6 +1,6 @@
 package main
 
-import "github.com/devum25/techbench/heaps"
+import "github.com/devum25/techbench/greedy"
 
 func main() {
 
@@ -228,7 +228,9 @@ func main() {
 
 	// fmt.Print(heaps.MergeRopes([]int{16, 7, 3, 5, 9, 8, 6, 15}))
 
-	heaps.KPlaceApart([]int{1, 40, 2, 3}, 2)
+	// heaps.CallFunc()
+	// greedy.MaxNumberOfJobs([]int{4, 4, 8, 15, 6}, []int{9, 5, 15, 16, 7})
+	greedy.MaxProfit([]int{1, 2, 3, 4, 5})
 }
 
 // 4,2,5,1,6,7,3

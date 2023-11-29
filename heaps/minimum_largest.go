@@ -99,10 +99,6 @@ func NewPairMinHeap() PairMinHeap {
 	return PairMinHeap{Items: make([][2]int, 0)}
 }
 
-//  [[2,1],
-//   [3,2]]
-//
-
 func (heap *PairMinHeap) Insert(idx, val int) {
 	if len(heap.Items) == 0 {
 		x := [2]int{val, idx}
