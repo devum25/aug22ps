@@ -1,6 +1,10 @@
 package main
 
-import "github.com/devum25/techbench/greedy"
+import (
+	"fmt"
+
+	"github.com/devum25/techbench/backtracking"
+)
 
 func main() {
 
@@ -230,7 +234,11 @@ func main() {
 
 	// heaps.CallFunc()
 	// greedy.MaxNumberOfJobs([]int{4, 4, 8, 15, 6}, []int{9, 5, 15, 16, 7})
-	greedy.MaxProfit([]int{1, 2, 3, 4, 5})
+	// greedy.BuyTickets(4, 3, []int{2, 2, 2})
+	// t := "mjmqqjrmzkvhxlyruonekhhofpzzslupzojfuoztvzmmqvmlhgqxehojfowtrinbatjujaxekbcydldglkbxsqbbnrkhfdnpfbuaktupfftiljwpgglkjqunvithzlzpgikixqeuimmtbiskemplcvljqgvlzvnqxgedxqnznddkiujwhdefziydtquoudzxstpjjitmiimbjfgfjikkjycwgnpdxpeppsturjwkgnifinccvqzwlbmgpdaodzptyrjjkbqmgdrftfbwgimsmjpknuqtijrsnwvtytqqvookinzmkkkrkgwafohflvuedssukjgipgmypakhlckvizmqvycvbxhlljzejcaijqnfgobuhuiahtmxfzoplmmjfxtggwwxliplntkfuxjcnzcqsaagahbbneugiocexcfpszzomumfqpaiydssmihdoewahoswhlnpctjmkyufsvjlrflfiktndubnymenlmpyrhjxfdcq"
+	// s :="rjufvjafbxnbgriwgokdgqdqewn"
+	fmt.Println(backtracking.MazeSolver([][]int{{1, 1, 1}, {1, 0, 1}, {0, 0, 1}}))
+	fmt.Println(backtracking.SolveNQueensCount(4))
 }
 
 // 4,2,5,1,6,7,3
