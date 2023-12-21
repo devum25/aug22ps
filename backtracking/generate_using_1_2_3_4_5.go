@@ -9,7 +9,7 @@ func Generate_2(N int) {
 	// generated_3(N, 0, &lst, &ans, &count)
 	generate_2(N, &lst, 0, &count)
 	fmt.Println(count)
-	fmt.Println(len(ans))
+	// fmt.Println(len(ans))
 }
 
 func generate_2(N int, cl *[]int, idx int, count *int) {

@@ -23,11 +23,12 @@ func countSubset(arr []int, currIdx int, lst *[]int, k int, count *int, ans *[][
 			temp[i] = y[i]
 			sum += y[i]
 		}
-		*ans = append(*ans, temp)
+
 		if sum == k {
 			x := *count
 			x++
 			*count = x
+			*ans = append(*ans, temp)
 		}
 		return
 	}
