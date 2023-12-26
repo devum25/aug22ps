@@ -64,10 +64,10 @@ func decode(n string, dp *[]int, i int) int {
 	x := 0
 	y := 0
 	if n[i] != '0' {
-		x = decode(n, dp, i-1)
+		x = decode(n, dp, i-1) //single digit
 	}
 	if check(n, i-1, i) {
-		y = decode(n, dp, i-2)
+		y = decode(n, dp, i-2) //double digit
 	}
 
 	(*dp)[i] = x + y
