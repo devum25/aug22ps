@@ -251,10 +251,7 @@ func main() {
 	// 	{'.', '.', '.', '.', '8', '.', '.', '7', '9'}})
 
 	// fmt.Println(backtracking.CountSubsetWithSumK([]int{1, 2, 3, 4, 5, 6}, 4))
-	fmt.Println(dynamicprogramming.MaximalRectangle([][]byte{{'0', '0', '0', '0', '0', '0', '1'},
-		{'0', '0', '0', '0', '1', '1', '1'},
-		{'1', '1', '1', '1', '1', '1', '1'},
-		{'0', '0', '0', '1', '1', '1', '1'}}))
+	fmt.Println(dynamicprogramming.MinDistance("intention", "execution"))
 }
 
 // 4,2,5,1,6,7,3

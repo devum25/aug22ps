@@ -34,3 +34,8 @@ func MinPathSumIterative(grid [][]int) int {
 
 	return dp[0][0]
 }
+
+// Solution approach:
+// Populate from N-1,M-1.
+// precalculate the value of right most column and bottom most row with help of N-1,M-1 value
+// now iterate over each cell and take min from adjacent cells+value of cell itself.
