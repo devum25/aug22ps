@@ -251,7 +251,7 @@ func main() {
 	// 	{'.', '.', '.', '.', '8', '.', '.', '7', '9'}})
 
 	// fmt.Println(backtracking.CountSubsetWithSumK([]int{1, 2, 3, 4, 5, 6}, 4))
-	fmt.Println(dynamicprogramming.MinDistance("intention", "execution"))
+	fmt.Println(dynamicprogramming.CountBits(2))
 }
 
 // 4,2,5,1,6,7,3
