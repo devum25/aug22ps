@@ -41,3 +41,39 @@ func DistinctSubsequence(s string, t string) int {
 
 	return dp[len(dp)-1][len(dp[0])-1]
 }
+
+func NumDistinct1(s string, t string) int {
+	dp := make([][]int, len(s)+1)
+	n := len(t) + 1
+
+	for i := 0; i < len(dp); i++ {
+		dp[i] = make([]int, n)
+	}
+
+	for i := 0; i < len(dp); i++ {
+		for j := 0; j < len(dp[i]); j++ {
+			dp[i][j] = -1
+		}
+	}
+
+	return distinct1(s, t, len(s), len(t), dp)
+}
+
+func distinct1(s, t string, ls, lt int, dp [][]int) int {
+	if dp[ls][lt] != -1 {
+		return dp[ls][lt]
+	}
+	if lt == 0 {
+		dp[ls][lt] = 1
+	}
+	if ls == 0 {
+		dp[ls][lt] = 0
+	}
+	if s[ls-1] != t[lt-1] {
+		dp[ls][lt] = distinct1(s, t, ls-1, lt, dp)
+	} else {
+		dp[ls][lt] = distinct1(s, t, ls-1, lt-1, dp) + distinct1(s, t, ls-1, lt, dp)
+	}
+
+	return dp[ls][lt]
+}

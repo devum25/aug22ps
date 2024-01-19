@@ -56,3 +56,21 @@ func solveOptimal(A int) int {
 	return dp[A]
 
 }
+
+/////////////////////////////////////////////////////////////func solve(A int )  (int) {
+
+func waystopup(n int, dp []int) int {
+	if n < 0 {
+		return 0
+	}
+	if n <= 1 {
+		return 1
+	}
+	if dp[n] != -1 {
+		return dp[n]
+	}
+
+	dp[n] = waystopup(n-1, dp)%1000000007 + waystopup(n-2, dp)%1000000007 + waystopup(n-3, dp)%1000000007 + waystopup(n-4, dp)%1000000007 + waystopup(n-5, dp)%1000000007 + waystopup(n-6, dp)%1000000007
+
+	return dp[n] % 1000000007
+}
