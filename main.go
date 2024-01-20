@@ -251,7 +251,7 @@ func main() {
 	// 	{'.', '.', '.', '.', '8', '.', '.', '7', '9'}})
 
 	// fmt.Println(backtracking.CountSubsetWithSumK([]int{1, 2, 3, 4, 5, 6}, 4))
-	fmt.Println(dynamicprogramming.MaxEnvelopes([][]int{{1, 3}, {3, 5}, {6, 7}, {6, 8}, {8, 4}, {9, 5}}))
+	fmt.Println(dynamicprogramming.WordBreak2("pineapplepenapple", []string{"apple", "pen", "applepen", "pine", "pineapple"}))
 }
 
 // 4,2,5,1,6,7,3
