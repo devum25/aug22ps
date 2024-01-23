@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/graphs"
+	"github.com/devum25/techbench/binarysearch"
 )
 
 func main() {
@@ -251,7 +251,7 @@ func main() {
 	// 	{'.', '.', '.', '.', '8', '.', '.', '7', '9'}})
 
 	// fmt.Println(backtracking.CountSubsetWithSumK([]int{1, 2, 3, 4, 5, 6}, 4))
-	fmt.Println(graphs.ValidPath(6, [][]int{{0, 1}, {0, 2}, {3, 5}, {5, 4}, {4, 3}}, 0, 5))
+	fmt.Println(binarysearch.Search([]int{4, 5, 6, 7, 0, 1, 2}, 0))
 }
 
 // 4,2,5,1,6,7,3
