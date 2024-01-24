@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/devum25/techbench/binarysearch"
+	"github.com/devum25/techbench/graphs"
 )
 
 func main() {
@@ -251,7 +251,7 @@ func main() {
 	// 	{'.', '.', '.', '.', '8', '.', '.', '7', '9'}})
 
 	// fmt.Println(backtracking.CountSubsetWithSumK([]int{1, 2, 3, 4, 5, 6}, 4))
-	fmt.Println(binarysearch.Search([]int{4, 5, 6, 7, 0, 1, 2}, 0))
+	fmt.Println(graphs.OrangesRotting([][]int{{1, 2}}))
 }
 
 // 4,2,5,1,6,7,3
