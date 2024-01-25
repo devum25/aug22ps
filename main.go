@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
-
-	"github.com/devum25/techbench/graphs"
+	"github.com/devum25/techbench/graphs/dfs"
 )
 
 func main() {
@@ -251,7 +249,7 @@ func main() {
 	// 	{'.', '.', '.', '.', '8', '.', '.', '7', '9'}})
 
 	// fmt.Println(backtracking.CountSubsetWithSumK([]int{1, 2, 3, 4, 5, 6}, 4))
-	fmt.Println(graphs.OrangesRotting([][]int{{1, 2}}))
+	dfs.AcquireConflictedArea([][]byte{{'O', 'O', 'O'}, {'O', 'O', 'O'}, {'O', 'O', 'O'}})
 }
 
 // 4,2,5,1,6,7,3
