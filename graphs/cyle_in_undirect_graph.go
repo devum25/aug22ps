@@ -10,7 +10,7 @@ package graphs
 // Nodes are numbered from 1 to A.
 // Your solution will run on multiple test cases. If you are using global variables make sure to clear them.
 
-func solve(A int, B [][]int) int {
+func CycleUndirectedGraph(A int, B [][]int) int {
 	adjList := make(map[int][]int)
 	visited := make(map[int]bool)
 	for _, v := range B {
@@ -20,7 +20,7 @@ func solve(A int, B [][]int) int {
 
 	for i := 1; i <= A; i++ {
 		if !visited[i] {
-			if dfs(i, visited, adjList) {
+			if dfs(i, visited, -1, adjList) {
 				return 1
 			}
 		}
@@ -29,17 +29,56 @@ func solve(A int, B [][]int) int {
 	return 0
 }
 
-func dfs(node int, visted map[int]bool, adjlist map[int][]int) bool {
+func dfs(node int, visted map[int]bool, parent int, adjlist map[int][]int) bool {
 	visted[node] = true
 
-	for _, neighbours := range adjlist[node] {
-		if !visted[neighbours] {
-			if dfs(neighbours, visted, adjlist) {
+	for _, connectedNode := range adjlist[node] {
+		if !visted[connectedNode] {
+			if dfs(connectedNode, visted, node, adjlist) {
 				return true
 			}
-			// }else if
+		} else if parent != connectedNode {
+			return true
 		}
 	}
 
 	return false
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+func DetectCycle(A int, B [][]int) int {
+	adjList := make(map[int][]int)
+
+	for _, v := range B {
+		adjList[v[0]] = append(adjList[v[0]], v[1])
+		adjList[v[1]] = append(adjList[v[1]], v[0])
+	}
+
+	visited := make(map[int]bool)
+	k := 0
+	for i := 1; i <= A; i++ {
+		if !visited[i] {
+			k++
+			dfs1(i, visited, adjList)
+		}
+	}
+
+	edges := A - 1 // no. of nodes-1 in acyclic graph
+
+	if A-k > edges {
+		return 1
+	} else {
+		return 0
+	}
+}
+
+func dfs1(node int, visited map[int]bool, adjList map[int][]int) {
+	visited[node] = true
+
+	for _, v := range adjList[node] {
+		if !visited[v] {
+			dfs1(v, visited, adjList)
+		}
+	}
 }
