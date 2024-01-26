@@ -35,37 +35,37 @@ import "math"
 // 	Console.WriteLine(res);
 //  }
 
-// TOP DOWN APPROACH
+// TOP DOWN APPROACH  // TIME LIMIT EXCEEDED FOR LARGE
 func CoinChange(coins []int, amount int) int {
 	dp := make([]int, amount+1)
 	for i := 0; i < len(dp); i++ {
 		dp[i] = -1
 	}
-	x := solve(coins, amount, &dp)
+	x := solve(coins, amount, dp)
 	return x
 }
 
-func solve(coins []int, n int, dp *[]int) int {
+func solve(coins []int, n int, dp []int) int {
 	if n == 0 {
 		return 0
 	}
-	if (*dp)[n] != -1 {
-		return (*dp)[n]
-	}
-	min := math.MaxInt - 1
+	ans := math.MaxInt
 	for i := 0; i < len(coins); i++ {
 		if n-coins[i] >= 0 {
-			x := solve(coins, n-coins[i], dp)
-			if x != -1 {
-				min = int(math.Min(float64(min), float64(x+1)))
+			subans := 0
+			if dp[n-coins[i]] != -1 {
+				subans = dp[n-coins[i]]
+			} else {
+				subans = solve(coins, n-coins[i], dp)
+			}
+
+			if subans != math.MaxInt && (subans+1) < ans {
+				ans = subans
 			}
 		}
 	}
-	if min == math.MaxInt-1 {
-		min = -1
-	}
-	(*dp)[n] = min
-	return (*dp)[n]
+	dp[n] = ans
+	return ans
 }
 
 // BOTTOM UP APPROACH

@@ -17,7 +17,7 @@ func NumberOfIsland(mat [][]int) int {
 	return islands
 }
 
-func dfs(mat [][]int, r, c int) {
+func dfs2(mat [][]int, r, c int) {
 	if r < 0 || r >= len(mat) || c < 0 || c >= len(mat) || mat[r][c] == 0 {
 		return
 	}
@@ -26,7 +26,7 @@ func dfs(mat [][]int, r, c int) {
 	col := []int{0, 1, 0, -1}
 
 	for i := 0; i < 4; i++ {
-		dfs(mat, i+row[i], c+col[i])
+		dfs2(mat, i+row[i], c+col[i])
 	}
 }
 
