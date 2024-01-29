@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/devum25/techbench/dynamicprogramming"
-	"github.com/devum25/techbench/graphs/dfs"
+	"github.com/devum25/techbench/graphs"
 )
 
 func main() {
@@ -253,7 +253,8 @@ func main() {
 	// dfs.AcquireConflictedArea([][]byte{{'O', 'O', 'O'}, {'O', 'O', 'O'}, {'O', 'O', 'O'}})
 	// graphs.DetectCycle(7, [][]int{{1, 2}, {2, 3}, {3, 1}, {2, 4}, {2, 5}, {2, 7}, {4, 6}, {5, 6}})
 	dynamicprogramming.TargetSum(2, 6, 7)
-	dfs.CycleInDirectedGraph(5, [][]int{{1, 2}, {1, 3}, {2, 3}, {1, 4}, {4, 3}, {4, 5}, {3, 5}})
+	graphs.CanFinish(2, [][]int{{0, 1}})
+	// {3, 4}, {1, 5}, {1, 2}, {4, 6}, {2, 3}, {1, 6}, {3, 5}, {0, 3}, {4, 5}, {0, 1}, {0, 5}}
 }
 
 // 4,2,5,1,6,7,3
