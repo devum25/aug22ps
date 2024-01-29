@@ -253,7 +253,7 @@ func main() {
 	// dfs.AcquireConflictedArea([][]byte{{'O', 'O', 'O'}, {'O', 'O', 'O'}, {'O', 'O', 'O'}})
 	// graphs.DetectCycle(7, [][]int{{1, 2}, {2, 3}, {3, 1}, {2, 4}, {2, 5}, {2, 7}, {4, 6}, {5, 6}})
 	dynamicprogramming.TargetSum(2, 6, 7)
-	graphs.CanFinish(2, [][]int{{0, 1}})
+	graphs.SelectBatchs(7, []int{1, 6, 7, 2, 9, 4, 5}, [][]int{{1, 2}, {2, 3}, {5, 6}, {5, 7}}, 12)
 	// {3, 4}, {1, 5}, {1, 2}, {4, 6}, {2, 3}, {1, 6}, {3, 5}, {0, 3}, {4, 5}, {0, 1}, {0, 5}}
 }
 
