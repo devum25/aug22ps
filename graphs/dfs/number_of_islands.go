@@ -18,10 +18,10 @@ func NumberOfIsland(mat [][]int) int {
 }
 
 func dfs2(mat [][]int, r, c int) {
-	if r < 0 || r >= len(mat) || c < 0 || c >= len(mat) || mat[r][c] == 0 {
+	if r < 0 || r >= len(mat) || c < 0 || c >= len(mat[r]) || mat[r][c] == 0 {
 		return
 	}
-
+	mat[r][c] = 0
 	row := []int{-1, 0, 1, 0}
 	col := []int{0, 1, 0, -1}
 

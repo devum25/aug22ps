@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/devum25/techbench/graphs/dijkstre"
-)
+import "github.com/devum25/techbench/graphs"
 
 func main() {
 
@@ -254,7 +252,8 @@ func main() {
 	//dynamicprogramming.TargetSum(2, 6, 7)
 	//graphs.SelectBatchs(7, []int{1, 6, 7, 2, 9, 4, 5}, [][]int{{1, 2}, {2, 3}, {5, 6}, {5, 7}}, 12)
 	// {3, 4}, {1, 5}, {1, 2}, {4, 6}, {2, 3}, {1, 6}, {3, 5}, {0, 3}, {4, 5}, {0, 1}, {0, 5}}
-	dijkstre.NetworkDelayTime([][]int{{1, 2, 1}}, 2, 2)
+	// dijkstre.ReverseEdges(5, [][]int{{1, 2}, {2, 3}, {4, 3}, {4, 5}})
+	graphs.EventualSafeNodes([][]int{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}})
 }
 
 // 4,2,5,1,6,7,3
