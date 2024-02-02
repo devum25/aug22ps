@@ -1,4 +1,4 @@
-package graphs
+package topological
 
 import "container/heap"
 

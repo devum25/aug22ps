@@ -1,6 +1,8 @@
 package main
 
-import "github.com/devum25/techbench/graphs"
+import (
+	"github.com/devum25/techbench/graphs/topological"
+)
 
 func main() {
 
@@ -253,7 +255,10 @@ func main() {
 	//graphs.SelectBatchs(7, []int{1, 6, 7, 2, 9, 4, 5}, [][]int{{1, 2}, {2, 3}, {5, 6}, {5, 7}}, 12)
 	// {3, 4}, {1, 5}, {1, 2}, {4, 6}, {2, 3}, {1, 6}, {3, 5}, {0, 3}, {4, 5}, {0, 1}, {0, 5}}
 	// dijkstre.ReverseEdges(5, [][]int{{1, 2}, {2, 3}, {4, 3}, {4, 5}})
-	graphs.EventualSafeNodes([][]int{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}})
+	//graphs.EventualSafeNodes([][]int{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}})
+	// graphs.ParallelCourse(1, [][]int{}, []int{1})
+	// minimumspanningtree.MinCostConnectPoints([][]int{{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}})
+	topological.MinHeightTree(4, [][]int{{1, 0}, {1, 2}, {1, 3}})
 }
 
 // 4,2,5,1,6,7,3

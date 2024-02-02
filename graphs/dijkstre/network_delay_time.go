@@ -27,7 +27,7 @@ func dijkstre(adjList map[int][][2]int, source int, nodes int) int {
 	pq := &Heap{}
 	heap.Init(pq)
 	min := math.MinInt
-	pq.Push(MinHeap{Node: source, Distance: 0})
+	heap.Push(pq, MinHeap{Node: source, Distance: 0})
 	lst := make([]int, nodes+1)
 	for i := 0; i < len(lst); i++ {
 		lst[i] = math.MaxInt
@@ -35,12 +35,12 @@ func dijkstre(adjList map[int][][2]int, source int, nodes int) int {
 	lst[0] = 0
 	lst[source] = 0
 	for pq.Len() > 0 {
-		temp := pq.Pop().(MinHeap)
+		temp := heap.Pop(pq).(MinHeap)
 
 		if temp.Distance == lst[temp.Node] {
 			for _, v := range adjList[temp.Node] {
 				if v[1]+temp.Distance < lst[v[0]] {
-					pq.Push(MinHeap{Node: v[0], Distance: v[1] + temp.Distance})
+					heap.Push(pq, MinHeap{Node: v[0], Distance: v[1] + temp.Distance})
 					lst[v[0]] = temp.Distance + v[1]
 				}
 			}
