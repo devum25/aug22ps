@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/devum25/techbench/graphs/topological"
-)
+import "github.com/devum25/techbench/dynamicprogramming"
 
 func main() {
 
@@ -258,7 +256,39 @@ func main() {
 	//graphs.EventualSafeNodes([][]int{{1, 2}, {2, 3}, {5}, {0}, {5}, {}, {}})
 	// graphs.ParallelCourse(1, [][]int{}, []int{1})
 	// minimumspanningtree.MinCostConnectPoints([][]int{{0, 0}, {2, 2}, {3, 10}, {5, 2}, {7, 0}})
-	topological.MinHeightTree(4, [][]int{{1, 0}, {1, 2}, {1, 3}})
+	//topological.MinHeightTree(4, [][]int{{1, 0}, {1, 2}, {1, 3}})
+
+	// graphs.MaximalNetworkRank(4, [][]int{{0, 1}, {0, 3}, {1, 2}, {1, 3}})
+
+	// graphs.SnakesAndLadders([][]int{
+	// 	{-1, -1, -1, -1, -1, -1},
+	// 	{-1, -1, -1, -1, -1, -1},
+	// 	{-1, -1, -1, -1, -1, -1},
+	// 	{-1, 35, -1, -1, 13, -1},
+	// 	{-1, -1, -1, -1, -1, -1},
+	// 	{-1, 15, -1, -1, -1, -1},
+	// })
+	// dynamicprogramming.MaxPoints([][]int{{2, 2}, {2, 2}, {2, 2}})
+	// ll := linkedlist.Constructor()
+	// ll.AddAtHead(3)
+	// ll.AddAtTail(5)
+	// // ll.AddAtTail(2)
+	// // ll.AddAtTail(3)
+	// // ll.AddAtTail(4)
+	// //ll.AddAtTail(5)
+	// // ll.AddAtTail(6)
+	// // ll.AddAtTail(7)
+	// // ll.AddAtTail(8)
+	// linkedlist.ReverseBetween3(ll.Next, 1, 1)
+	// ll.DeleteAtIndex(0)
+	// ll.AddAtIndex(1, 2)
+	// fmt.Print(ll.Get(1))
+	// ll.DeleteAtIndex(1)
+	// fmt.Print(ll.Get(1))
+	// strings.Re("IX")
+	// strings.IntToRoman(3)
+	dynamicprogramming.CalculateMinimumHPRecusive([][]int{{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}})
+
 }
 
 // 4,2,5,1,6,7,3
