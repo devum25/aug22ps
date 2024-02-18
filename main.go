@@ -1,6 +1,9 @@
 package main
 
-import "github.com/devum25/techbench/dynamicprogramming"
+import (
+	darraygo "github.com/devum25/techbench/2darray.go"
+	"github.com/devum25/techbench/linkedlist"
+)
 
 func main() {
 
@@ -269,16 +272,24 @@ func main() {
 	// 	{-1, 15, -1, -1, -1, -1},
 	// })
 	// dynamicprogramming.MaxPoints([][]int{{2, 2}, {2, 2}, {2, 2}})
-	// ll := linkedlist.Constructor()
-	// ll.AddAtHead(3)
-	// ll.AddAtTail(5)
-	// // ll.AddAtTail(2)
-	// // ll.AddAtTail(3)
-	// // ll.AddAtTail(4)
-	// //ll.AddAtTail(5)
-	// // ll.AddAtTail(6)
-	// // ll.AddAtTail(7)
-	// // ll.AddAtTail(8)
+	ll := linkedlist.Constructor()
+	ll.AddAtHead(5)
+	ll.AddAtTail(10)
+	ll.AddAtTail(14)
+	ll.AddAtTail(40)
+
+	ll2 := linkedlist.Constructor()
+	ll2.AddAtHead(2)
+	ll2.AddAtTail(3)
+	ll2.AddAtTail(20)
+
+	linkedlist.SortDescendingOrder(ll.Next, ll2.Next)
+	// ll2.AddAtTail(40)
+	// ll.AddAtTail(4)
+	//ll.AddAtTail(5)
+	// ll.AddAtTail(6)
+	// ll.AddAtTail(7)
+	// ll.AddAtTail(8)
 	// linkedlist.ReverseBetween3(ll.Next, 1, 1)
 	// ll.DeleteAtIndex(0)
 	// ll.AddAtIndex(1, 2)
@@ -287,7 +298,14 @@ func main() {
 	// fmt.Print(ll.Get(1))
 	// strings.Re("IX")
 	// strings.IntToRoman(3)
-	dynamicprogramming.CalculateMinimumHPRecusive([][]int{{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}})
+	// dynamicprogramming.CalculateMinimumHPRecusive([][]int{{-2, -3, 3}, {-5, -10, 1}, {10, 30, -5}})
+	//subarrays.FirstMissingPositive([]int{1, 1})
+	// arrayquestion.MergeIntervals([][]int{{1, 4}, {0, 2}, {3, 5}})
+	// arrayquestion.PlusOne([]int{0, 0, 4, 4, 6, 0, 9, 6, 5, 1})
+	// arrayquestion.FindLeastNumOfUniqueInts([]int{4, 3, 1, 1, 3, 3, 2}, 3)
+
+	s := darraygo.Constructor([][]int{{-4, -5}})
+	s.SumRegion(0, 1, 0, 1)
 
 }
 
