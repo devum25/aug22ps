@@ -1,7 +1,7 @@
 package main
 
 import (
-	darraygo "github.com/devum25/techbench/2darray.go"
+	"github.com/devum25/techbench/arrayquestion"
 	"github.com/devum25/techbench/linkedlist"
 )
 
@@ -304,8 +304,15 @@ func main() {
 	// arrayquestion.PlusOne([]int{0, 0, 4, 4, 6, 0, 9, 6, 5, 1})
 	// arrayquestion.FindLeastNumOfUniqueInts([]int{4, 3, 1, 1, 3, 3, 2}, 3)
 
-	s := darraygo.Constructor([][]int{{-4, -5}})
-	s.SumRegion(0, 1, 0, 1)
+	// s := darraygo.Constructor([][]int{{-4, -5}})
+	// s.SumRegion(0, 1, 0, 1)
+
+	// arrayquestion.MinimumDeletions([]int{2, 10, 7, 5, 4, 1, 8, 6})
+
+	// darraygo.MaxSubSquareMatrix([][]int{{1, 1, 1, 1, 1}, {2, 2, 2, 2, 2}, {3, 8, 6, 7, 3}, {4, 4, 4, 4, 4}, {5, 5, 5, 5, 5}}, 3)
+
+	// darraygo.SearchKInSorted([][]int{{2, 2, 3}, {2, 2, 3}, {2, 2, 3}}, 2)
+	arrayquestion.MaximumGap([]int{3, 5, 4, 2})
 
 }
 
