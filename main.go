@@ -312,8 +312,11 @@ func main() {
 	// darraygo.MaxSubSquareMatrix([][]int{{1, 1, 1, 1, 1}, {2, 2, 2, 2, 2}, {3, 8, 6, 7, 3}, {4, 4, 4, 4, 4}, {5, 5, 5, 5, 5}}, 3)
 
 	// darraygo.SearchKInSorted([][]int{{2, 2, 3}, {2, 2, 3}, {2, 2, 3}}, 2)
-	arrayquestion.MaximumGap([]int{3, 5, 4, 2})
-
+	//arrayquestion.MaximumGap([]int{3, 5, 4, 2})
+	//	arrayquestion.Merge([]int{4, 5, 6, 0, 0, 0}, 3, []int{1, 2, 3}, 3)
+	//	arrayquestion.SortArray([]int{5, 2, 3, 1})
+	// arrayquestion.InversionCount([]int{10, 3, 8, 15, 6, 12, 2, 18, 7, 1})
+	arrayquestion.CountSmaller([]int{5, 2, 6, 1})
 }
 
 // 4,2,5,1,6,7,3
