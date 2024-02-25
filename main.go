@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/devum25/techbench/arrayquestion"
+	"github.com/devum25/techbench/dynamicprogramming"
 	"github.com/devum25/techbench/linkedlist"
 )
 
@@ -316,7 +316,19 @@ func main() {
 	//	arrayquestion.Merge([]int{4, 5, 6, 0, 0, 0}, 3, []int{1, 2, 3}, 3)
 	//	arrayquestion.SortArray([]int{5, 2, 3, 1})
 	// arrayquestion.InversionCount([]int{10, 3, 8, 15, 6, 12, 2, 18, 7, 1})
-	arrayquestion.CountSmaller([]int{5, 2, 6, 1})
+	//	arrayquestion.CountSmaller([]int{5, 2, 6, 1})
+	// arrayquestion.PartitionOnFirstElementFromLtoR([]int{10, 3, 8, 15, 6, 12, 2, 18, 7, 15, 4}, 2, 8)
+
+	//	sorting.QuickSort([]int{10, 3, 8, 15, 6, 12, 2, 18, 7, 15, 4})
+	// head1 := &linkedlist.Node{Val: 1}
+
+	// linkedlist.InsertAtEnd(head1, 1)
+
+	// linkedlist.Partition(head1, 2)
+	// dynamicprogramming.MaximalRectangleRevision([][]byte{{'1', '0', '1', '1', '1'}, {'0', '1', '0', '1', '0'},
+	// 	{'1', '1', '0', '1', '1'}, {'1', '1', '0', '1', '1'}, {'0', '1', '1', '1', '1'}})
+
+	dynamicprogramming.MaximalSquare([][]byte{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}})
 }
 
 // 4,2,5,1,6,7,3
