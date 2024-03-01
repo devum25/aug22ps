@@ -334,7 +334,8 @@ func main() {
 	//	hashset.MinimumDistance([]int{1, 2, 3, 6, 1, 2, 3, 2, 1})
 	// hashset.RelativeSortArray([]int{26, 21, 11, 20, 50, 34, 1, 18}, []int{21, 11, 26, 20})
 	// hashset.Colorful(3245)
-	hashset.Colorful(99)
+	// hashset.Colorful(99)
+	hashset.LengthOfLongestSubstring("aabaab!bb")
 }
 
 // 4,2,5,1,6,7,3
