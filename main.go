@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/devum25/techbench/dynamicprogramming"
+	hashset "github.com/devum25/techbench/hashing"
 	"github.com/devum25/techbench/linkedlist"
 )
 
@@ -328,7 +328,11 @@ func main() {
 	// dynamicprogramming.MaximalRectangleRevision([][]byte{{'1', '0', '1', '1', '1'}, {'0', '1', '0', '1', '0'},
 	// 	{'1', '1', '0', '1', '1'}, {'1', '1', '0', '1', '1'}, {'0', '1', '1', '1', '1'}})
 
-	dynamicprogramming.MaximalSquare([][]byte{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}})
+	// dynamicprogramming.MaximalSquare([][]byte{{'1', '0', '1', '0', '0'}, {'1', '0', '1', '1', '1'}, {'1', '1', '1', '1', '1'}, {'1', '0', '0', '1', '0'}})
+	// hashset.TwoSum([]int{3, 2, 4}, 6)
+	//	hashset.SubArrayWithDistinctElementOfSizeK([]int{6, 3, 7, 3, 8, 6, 9}, 4)
+	//	hashset.MinimumDistance([]int{1, 2, 3, 6, 1, 2, 3, 2, 1})
+	hashset.CountOfRightTriangleOptimal([][2]int{{1, 3}, {2, 3}, {3, 3}, {3, 1}, {1, 1}})
 }
 
 // 4,2,5,1,6,7,3
