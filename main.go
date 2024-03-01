@@ -332,7 +332,9 @@ func main() {
 	// hashset.TwoSum([]int{3, 2, 4}, 6)
 	//	hashset.SubArrayWithDistinctElementOfSizeK([]int{6, 3, 7, 3, 8, 6, 9}, 4)
 	//	hashset.MinimumDistance([]int{1, 2, 3, 6, 1, 2, 3, 2, 1})
-	hashset.CountOfRightTriangleOptimal([][2]int{{1, 3}, {2, 3}, {3, 3}, {3, 1}, {1, 1}})
+	// hashset.RelativeSortArray([]int{26, 21, 11, 20, 50, 34, 1, 18}, []int{21, 11, 26, 20})
+	// hashset.Colorful(3245)
+	hashset.Colorful(99)
 }
 
 // 4,2,5,1,6,7,3
