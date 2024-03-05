@@ -2,6 +2,8 @@ package greedy
 
 import "sort"
 
+// 948. Bag of Tokens
+
 func BagOfTokensScore(tokens []int, power int) int {
 	sort.Ints(tokens)
 	score := 0

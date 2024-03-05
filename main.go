@@ -1,6 +1,8 @@
 package main
 
-import "github.com/devum25/techbench/arrayquestion"
+import (
+	"github.com/devum25/techbench/stacks"
+)
 
 func main() {
 
@@ -332,12 +334,12 @@ func main() {
 	// hashset.RelativeSortArray([]int{26, 21, 11, 20, 50, 34, 1, 18}, []int{21, 11, 26, 20})
 	// hashset.Colorful(3245)
 	// hashset.Colorful(99)
-	//hashset.LengthOfLongestSubstring("aabaab!bb")
-	// greedy.BagOfTokensScore([]int{71, 55, 82}, 54)
-
-	// stacks.RemoveOccurrences("daabcbaabcbc", "abc")
-
-	arrayquestion.MinimumLength("abbbbbbbbbbbbbbbbbbba")
+	// hashset.LengthOfLongestSubstring("aabaab!bb")
+	// st := stacks.ConstructorStack(3)
+	// st.Push(1)
+	// st.Push(2)
+	// st.Pop()
+	stacks.RemoveOuterParentheses("(()())(())")
 }
 
 // 4,2,5,1,6,7,3
