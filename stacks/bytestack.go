@@ -18,3 +18,7 @@ func (s *ItemStack) Pop() byte {
 	s.items = s.items[0 : len(s.items)-1]
 	return item
 }
+
+func (s *ItemStack) Peek() byte {
+	return s.items[len(s.items)-1]
+}

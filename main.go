@@ -1,9 +1,6 @@
 package main
 
-import (
-	hashset "github.com/devum25/techbench/hashing"
-	"github.com/devum25/techbench/linkedlist"
-)
+import "github.com/devum25/techbench/arrayquestion"
 
 func main() {
 
@@ -272,18 +269,18 @@ func main() {
 	// 	{-1, 15, -1, -1, -1, -1},
 	// })
 	// dynamicprogramming.MaxPoints([][]int{{2, 2}, {2, 2}, {2, 2}})
-	ll := linkedlist.Constructor()
-	ll.AddAtHead(5)
-	ll.AddAtTail(10)
-	ll.AddAtTail(14)
-	ll.AddAtTail(40)
+	// ll := linkedlist.Constructor()
+	// ll.AddAtHead(5)
+	// ll.AddAtTail(10)
+	// ll.AddAtTail(14)
+	// ll.AddAtTail(40)
 
-	ll2 := linkedlist.Constructor()
-	ll2.AddAtHead(2)
-	ll2.AddAtTail(3)
-	ll2.AddAtTail(20)
+	// ll2 := linkedlist.Constructor()
+	// ll2.AddAtHead(2)
+	// ll2.AddAtTail(3)
+	// ll2.AddAtTail(20)
 
-	linkedlist.SortDescendingOrder(ll.Next, ll2.Next)
+	// linkedlist.SortDescendingOrder(ll.Next, ll2.Next)
 	// ll2.AddAtTail(40)
 	// ll.AddAtTail(4)
 	//ll.AddAtTail(5)
@@ -335,7 +332,12 @@ func main() {
 	// hashset.RelativeSortArray([]int{26, 21, 11, 20, 50, 34, 1, 18}, []int{21, 11, 26, 20})
 	// hashset.Colorful(3245)
 	// hashset.Colorful(99)
-	hashset.LengthOfLongestSubstring("aabaab!bb")
+	//hashset.LengthOfLongestSubstring("aabaab!bb")
+	// greedy.BagOfTokensScore([]int{71, 55, 82}, 54)
+
+	// stacks.RemoveOccurrences("daabcbaabcbc", "abc")
+
+	arrayquestion.MinimumLength("abbbbbbbbbbbbbbbbbbba")
 }
 
 // 4,2,5,1,6,7,3
