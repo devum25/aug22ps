@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/devum25/techbench/stacks"
+	"github.com/devum25/techbench/queue"
 )
 
 func main() {
@@ -339,7 +339,21 @@ func main() {
 	// st.Push(1)
 	// st.Push(2)
 	// st.Pop()
-	stacks.RemoveOuterParentheses("(()())(())")
+	//stacks.RemoveOuterParentheses("(()())(())")
+	//stacks.FinalPrices1([]int{5, 4, 10, 2, 6, 1, 1, 1, 9, 1})
+	//stacks.LargestRectangleArea1([]int{4, 2, 0, 3, 2, 5})
+	queue := queue.NewMyCircularQueue(6)
+	queue.EnQueue(6)
+	queue.Rear()
+	queue.Rear()
+	queue.DeQueue()
+	queue.EnQueue(5)
+	queue.Rear()
+	queue.DeQueue()
+	queue.Front()
+	queue.DeQueue()
+	queue.DeQueue()
+	queue.DeQueue()
 }
 
 // 4,2,5,1,6,7,3
