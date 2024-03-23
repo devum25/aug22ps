@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/devum25/techbench/queue"
+	"github.com/devum25/techbench/backtracking"
 )
 
 func main() {
@@ -342,18 +342,24 @@ func main() {
 	//stacks.RemoveOuterParentheses("(()())(())")
 	//stacks.FinalPrices1([]int{5, 4, 10, 2, 6, 1, 1, 1, 9, 1})
 	//stacks.LargestRectangleArea1([]int{4, 2, 0, 3, 2, 5})
-	queue := queue.NewMyCircularQueue(6)
-	queue.EnQueue(6)
-	queue.Rear()
-	queue.Rear()
-	queue.DeQueue()
-	queue.EnQueue(5)
-	queue.Rear()
-	queue.DeQueue()
-	queue.Front()
-	queue.DeQueue()
-	queue.DeQueue()
-	queue.DeQueue()
+	// queue := queue.NewMyCircularQueue(6)
+	// queue.EnQueue(6)
+	// queue.Rear()
+	// queue.Rear()
+	// queue.DeQueue()
+	// queue.EnQueue(5)
+	// queue.Rear()
+	// queue.DeQueue()
+	// queue.Front()
+	// queue.DeQueue()
+	// queue.DeQueue()
+	// queue.DeQueue()
+	//greedy.MaximumHappinessSum([]int{12, 1, 42}, 3)
+	// trie.ShortestSubstring([]string{"gfnt", "xn", "mdz", "yfmr", "fi", "wwncn", "hkdy"})
+	//	trie.FindMaximumXOR([]int{3, 10, 5, 25, 2, 8})
+	//	arrayquestion.UnmarkedSumArray([]int{1, 12, 12, 4, 14, 1, 12, 1}, [][]int{{1, 2}, {5, 4}, {4, 0}, {0, 1}, {0, 3}})
+	// greedy.LeastInterval([]byte{'A', 'C', 'A', 'B', 'D', 'B'}, 1)
+	backtracking.BeautifulSubsets([]int{2, 4, 6}, 2)
 }
 
 // 4,2,5,1,6,7,3
