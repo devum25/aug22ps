@@ -1,8 +1,6 @@
 package main
 
-import (
-	"github.com/devum25/techbench/backtracking"
-)
+import "fmt"
 
 func main() {
 
@@ -359,7 +357,18 @@ func main() {
 	//	trie.FindMaximumXOR([]int{3, 10, 5, 25, 2, 8})
 	//	arrayquestion.UnmarkedSumArray([]int{1, 12, 12, 4, 14, 1, 12, 1}, [][]int{{1, 2}, {5, 4}, {4, 0}, {0, 1}, {0, 3}})
 	// greedy.LeastInterval([]byte{'A', 'C', 'A', 'B', 'D', 'B'}, 1)
-	backtracking.BeautifulSubsets([]int{2, 4, 6}, 2)
+	//backtracking.BeautifulSubsets([]int{2, 4, 6}, 2)
+
+	//arrayquestion.MinimumDistance([][]int{{3, 2}, {3, 9}, {7, 10}, {4, 4}, {8, 10}, {2, 7}})
+	//arrayquestion.CountSubarrays([]int{1, 1, 1, 1}, 1, 1)
+	// strings.IsIsomorphic("foo", "bar")
+
+	arr := [10]int{1, 2, 4, 5, -1, -2, -3, -4, -4, -5}
+
+	for _, v := range arr {
+		fmt.Println(v)
+	}
+
 }
 
 // 4,2,5,1,6,7,3
