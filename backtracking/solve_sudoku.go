@@ -1,5 +1,7 @@
 package backtracking
 
+import "strconv"
+
 // Sudoku Solver
 // Write a program to solve a Sudoku puzzle by filling the empty cells.
 
@@ -32,56 +34,86 @@ package backtracking
 // 		 ["3","4","5","2","8","6","1","7","9"]]
 // Explanation: The input board is shown above and the only valid solution is shown below:
 
-func solveSudoku(board [][]byte) {
-	sudoku(&board, 0, 0, len(board))
+func SolveSudoku(board [][]byte) {
+
+	grid := transform(board)
+
+	solve3(grid, 0, 0)
+
+	transform1(grid, board)
 }
 
-func sudoku(matrix *[][]byte, i, j int, n int) bool {
-	// base case
-	if i == n {
+func solve3(board [][]int, row, col int) bool {
+	if col == len(board) {
+		col = 0
+		row++
+	}
+
+	if row == len(board) {
 		return true
 	}
-	// edge case
-	if j == n {
-		return sudoku(matrix, i+1, 0, n)
-	}
-	// if this cell is already populated
-	if (*matrix)[i][j] != '.' {
-		return sudoku(matrix, i, j+1, n)
+
+	if board[row][col] > 0 {
+		return solve3(board, row, col+1)
 	}
 
-	for nu := 1; nu <= n; nu++ {
-		if canbeplaced(matrix, i, j, byte(nu+'0')) {
-			(*matrix)[i][j] = byte(nu + '0')
-			if sudoku(matrix, i, j+1, n) {
+	for i := 1; i <= 9; i++ {
+		if isValid1(board, row, col, i) {
+			board[row][col] = i
+			if solve3(board, row, col+1) {
 				return true
 			}
+			board[row][col] = 0
 		}
 	}
-
-	(*matrix)[i][j] = '.'
 
 	return false
 }
 
-func canbeplaced(matrix *[][]byte, i, j int, number byte) bool {
-	// check for row and col
-	for k := 0; k < len(*matrix); k++ {
-		if (*matrix)[i][k] == number || (*matrix)[k][j] == number {
+func isValid1(grid [][]int, row, col, val int) bool {
+	for k := 0; k < len(grid); k++ {
+		if grid[row][k] == val || grid[col][k] == val {
 			return false
 		}
 	}
-	// check for subgrid
-	a := (i / 3) * 3
-	b := (j / 3) * 3
 
-	for x := a; x < a+3; x++ {
-		for y := b; y < b+3; y++ {
-			if (*matrix)[x][y] == number {
+	u := (row / 3) * 3
+	v := (col / 3) * 3
+
+	for i := 0; i < 3; i++ {
+		for j := 0; j < 3; j++ {
+			if grid[u+i][v+j] == val {
 				return false
 			}
 		}
 	}
 
 	return true
+}
+
+func transform1(grid [][]int, board [][]byte) {
+	for i := 0; i < len(board); i++ {
+		for j := 0; j < len(board[i]); j++ {
+			board[i][j] = byte(grid[i][j] + '0')
+		}
+	}
+}
+
+func transform(board [][]byte) [][]int {
+	grid := make([][]int, len(board))
+
+	for i := 0; i < len(grid); i++ {
+		grid[i] = make([]int, len(board[0]))
+	}
+
+	for i := 0; i < len(grid); i++ {
+		for j := 0; j < len(grid[i]); j++ {
+			if board[i][j] == '.' {
+				continue
+			}
+			grid[i][j], _ = strconv.Atoi(string(board[i][j]))
+		}
+	}
+
+	return grid
 }
