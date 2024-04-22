@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/devum25/techbench/backtracking"
 	"github.com/devum25/techbench/binarytree"
-	hashset "github.com/devum25/techbench/hashing"
+	"github.com/devum25/techbench/graphs"
 )
 
 func main() {
@@ -391,7 +391,9 @@ func main() {
 	root.Right = &binarytree.TreeNode{Val: 2, Left: &binarytree.TreeNode{Val: 3}, Right: &binarytree.TreeNode{Val: 4}}
 
 	// graphs.ValidPath1(10, [][]int{{0, 7}, {0, 8}, {6, 1}, {2, 0}, {0, 4}, {5, 8}, {4, 7}, {1, 3}, {3, 5}, {6, 5}}, 7, 5)
-	hashset.NumberOfSpecialChars2("AbcbDBdD")
+	// hashset.NumberOfSpecialChars2("AbcbDBdD")
+	// graphs.NumEnclaves([][]int{{0, 0, 0, 0}, {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}})
+	graphs.OpenLock([]string{"0201", "0101", "0102", "1212", "2002"}, "0202")
 }
 
 // 4,2,5,1,6,7,3
