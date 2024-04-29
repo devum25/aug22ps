@@ -1,9 +1,10 @@
 package main
 
 import (
+	"github.com/devum25/techbench/arrayquestion"
 	"github.com/devum25/techbench/backtracking"
 	"github.com/devum25/techbench/binarytree"
-	"github.com/devum25/techbench/graphs"
+	"github.com/devum25/techbench/graphs/dfs"
 )
 
 func main() {
@@ -393,7 +394,11 @@ func main() {
 	// graphs.ValidPath1(10, [][]int{{0, 7}, {0, 8}, {6, 1}, {2, 0}, {0, 4}, {5, 8}, {4, 7}, {1, 3}, {3, 5}, {6, 5}}, 7, 5)
 	// hashset.NumberOfSpecialChars2("AbcbDBdD")
 	// graphs.NumEnclaves([][]int{{0, 0, 0, 0}, {1, 0, 1, 0}, {0, 1, 1, 0}, {0, 0, 0, 0}})
-	graphs.OpenLock([]string{"0201", "0101", "0102", "1212", "2002"}, "0202")
+	// graphs.OpenLock([]string{"0201", "0101", "0102", "1212", "2002"}, "0202")
+	//dfs.IsBipartite1([][]int{{1, 2, 3}, {0, 2}, {0, 1, 3}, {0, 2}})
+	// arrayquestion.MinimumAddedInteger([]int{4, 20, 16, 12, 8}, []int{14, 18, 10})
+	dfs.CountCompleteComponents(4, [][]int{{1, 0}, {2, 0}, {2, 1}, {3, 0}})
+	arrayquestion.MinimumAddedInteger2([]int{3, 5, 5, 3}, []int{7, 7})
 }
 
 // 4,2,5,1,6,7,3
