@@ -114,3 +114,38 @@ func generateSubset_duplicate(arr []int, currIdx int, lst *[]int, ans *[][]int) 
 	}
 	generateSubset_duplicate(arr, currIdx+1, lst, ans)
 }
+
+/////////////////////////////////////////////////////////////////////////
+
+func SubsetsWithDup(nums []int) [][]int {
+	ans := make([][]int, 0)
+	lst := make([]int, 0)
+	hash := make(map[int]bool)
+	solve9(nums, lst, &ans, 0, hash)
+	return ans
+}
+
+func solve9(nums []int, lst []int, ans *[][]int, i int, hash map[int]bool) {
+	if i == len(nums) {
+		temp := make([]int, len(lst))
+
+		num := 0
+		p := 10
+		for i := 0; i < len(temp); i++ {
+			num = num*p + lst[i]
+			temp[i] = lst[i]
+		}
+
+		if _, ok := hash[num]; !ok {
+			*ans = append(*ans, temp)
+			hash[num] = true
+		}
+
+		return
+	}
+
+	lst = append(lst, nums[i])
+	solve9(nums, lst, ans, i+1, hash)
+	lst = lst[:len(lst)-1]
+	solve9(nums, lst, ans, i+1, hash)
+}

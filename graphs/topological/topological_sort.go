@@ -1,6 +1,8 @@
 package topological
 
-import "container/heap"
+import (
+	"container/heap"
+)
 
 func TopologicalSort(A int, B [][]int) []int {
 	adjList := make(map[int][]int)
