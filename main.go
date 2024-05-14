@@ -3,7 +3,7 @@ package main
 import (
 	"github.com/devum25/techbench/backtracking"
 	"github.com/devum25/techbench/binarytree"
-	"github.com/devum25/techbench/strings"
+	"github.com/devum25/techbench/dynamicprogramming"
 )
 
 func main() {
@@ -402,7 +402,8 @@ func main() {
 	//backtracking.SubsetsWithDup([]int{1, 2, 2})
 	// dfs.RoadsAndLibraries(5, 6, 1, [][]int32{{1, 2}, {1, 3}, {1, 4}})
 	// arrayquestion.KthSmallestPrimeFraction([]int{1, 29, 47}, 1)
-	strings.CapitalizeTitle("i lOve leetcode")
+	// strings.CapitalizeTitle("i lOve leetcode")
+	dynamicprogramming.MaximumEnergy([]int{8, -5}, 1)
 }
 
 // 4,2,5,1,6,7,3
