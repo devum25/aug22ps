@@ -404,7 +404,8 @@ func main() {
 	// arrayquestion.KthSmallestPrimeFraction([]int{1, 29, 47}, 1)
 	// strings.CapitalizeTitle("i lOve leetcode")
 	// dynamicprogramming.MaximumEnergy([]int{8, -5}, 1)
-	revision1.FindMedianSortedArrays([]int{1, 2}, []int{3, 4})
+	// revision1.FindMedianSortedArrays([]int{1, 2}, []int{3, 4})
+	revision1.QueryResults(1, [][]int{{0, 1}, {1, 4}, {1, 1}, {1, 4}, {1, 1}})
 }
 
 // 4,2,5,1,6,7,3
